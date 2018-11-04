@@ -1,4 +1,4 @@
-use monuments;
+use wonders;
 db.dropDatabase();
 
 db.monumentInfo.insertMany([

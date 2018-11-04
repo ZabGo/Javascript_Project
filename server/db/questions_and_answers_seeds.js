@@ -1,5 +1,10 @@
+const Questions = function () {
+
+}
+
+const run = function {
 use wonders;
-db.dropDatabase();
+
 
 db.questionsAndAnswers.insertMany([
 	{
@@ -1609,3 +1614,7 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 ]);
+
+};
+
+module.exports = Questions;

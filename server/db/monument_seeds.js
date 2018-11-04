@@ -1,5 +1,9 @@
+const Monuments = function () {
+}
+
+const run = function () {
 use wonders;
-db.dropDatabase();
+
 
 db.monumentInfo.insertMany([
 
@@ -40,3 +44,7 @@ db.monumentInfo.insertMany([
   }
 
 ]);
+
+};
+
+module.exports = Monuments;

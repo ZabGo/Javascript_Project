@@ -1,8 +1,3 @@
-const Questions = function () {
-
-}
-
-const run = function {
 use wonders;
 
 
@@ -1614,7 +1609,3 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 ]);
-
-};
-
-module.exports = Questions;

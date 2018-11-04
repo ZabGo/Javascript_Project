@@ -1,7 +1,3 @@
-const Monuments = function () {
-}
-
-const run = function () {
 use wonders;
 
 
@@ -15,12 +11,12 @@ db.monumentInfo.insertMany([
   {
     name: "Great Pyramid of Giza",
     location: "29.979495, 31.134266",
-    details: "The Great Pyramid of Giza is the oldest Wonder of the Ancient World, and is the only one that has remained almost fully intact. It is located near Giza in Egypt and the building of the structure is thought to have concluded around 2560 BC. It is thought that the structure took 10 to 20 years to complete and was built as a tomb for the Pharaoh Khufu. Originally built to 481 feet, it was known as the tallest man-made structure, until the Lincoln Cathedral surpassed this in the 1300s. The Pyramid therefore remained the tallest man-made structure for over 3,800 years. It is thought that the Pyramid was constructed using limestone, granite and mortar. The outside of the pyramid was constructed using the limestone, which created a smooth outer surface of the pyramid. The pyramid had three chambers (that have been discovered). One chamber is unfinished and protrudes down into the bedrock beneath the pyramid. The two other chambers are the Queen’s Chamber and the King’s Chamber, which are located higher up in the Pyramid than the unfinished chamber. The King’s Chamber is made completely of Granite."
+    details: "The Great Pyramid of Giza is the oldest Wonder of the Ancient World, and is the only one that has remained almost fully intact. It is located near Giza in Egypt and the building of the structure is thought to have concluded around 2560 BC. It is thought that the structure took 10 to 20 years to complete and was built as a tomb for the Pharaoh Khufu. Originally built to 481 feet, it was known as the tallest man-made structure, until the Lincoln Cathedral surpassed this in the 1300s. The Pyramid therefore remained the tallest man-made structure for over 3,800 years. It is thought that the Pyramid was constructed using limestone, granite and mortar. The outside of the pyramid was constructed using the limestone, which created a smooth outer surface of the pyramid. The pyramid had three chambers (that have been discovered). One chamber is unfinished and protrudes down into the bedrock beneath the pyramid. The two other chambers are the Queen's Chamber and the King’s Chamber, which are located higher up in the Pyramid than the unfinished chamber. The King’s Chamber is made completely of Granite."
   },
   {
     name: "Hanging Gardens of Babylon",
     location: "35.9689576, 41.642653",
-    details: "The Location of the Hanging Gardens of Babylon is not definitively known, and it is the only one from the Seven Wonders where the location is not identified. It is rumored that the location was in Iraq, which is where the Ancient City of Babylon was located, but there were a few other cities called Babylon as it meant “Gate of the Gods”, so it may have been located elsewhere. No physical evidence has been found for the Hanging Gardens of Babylon, but the structure has been mentioned in various pieces of writing. It is unknown if these descriptions are purely mythical or if this structure actually existed but was completely destroyed sometime around 1AD. It is unclear as to who built the Hanging Gardens of Babylon. One theory suggests it was King Nebuchadnezzar II who built the structure for his wife, and he built it nearby a grand palace which went by the name “The Marvel of Mankind”. Another theory suggests Queen Semiramis was attributed to the construction of The Hanging Gardens, and the Gardens have been known to go by the name “The Hanging Gardens of Semiramis” for this reason. The name of the structure came from the Greek word kremastós, which means “overhanging”, which was then given the English word of “hanging”. It is thought that this word was used to describe the way that the trees and plants were planted on a raised structure (for example a terrace or in teirs)."
+    details: "The Location of the Hanging Gardens of Babylon is not definitively known, and it is the only one from the Seven Wonders where the location is not identified. It is rumored that the location was in Iraq, which is where the Ancient City of Babylon was located, but there were a few other cities called Babylon as it meant 'Gate of the Gods', so it may have been located elsewhere. No physical evidence has been found for the Hanging Gardens of Babylon, but the structure has been mentioned in various pieces of writing. It is unknown if these descriptions are purely mythical or if this structure actually existed but was completely destroyed sometime around 1AD. It is unclear as to who built the Hanging Gardens of Babylon. One theory suggests it was King Nebuchadnezzar II who built the structure for his wife, and he built it nearby a grand palace which went by the name 'The Marvel of Mankind'. Another theory suggests Queen Semiramis was attributed to the construction of The Hanging Gardens, and the Gardens have been known to go by the name “The Hanging Gardens of Semiramis” for this reason. The name of the structure came from the Greek word kremastós, which means “overhanging”, which was then given the English word of “hanging”. It is thought that this word was used to describe the way that the trees and plants were planted on a raised structure (for example a terrace or in teirs)."
   },
   {
     name: "Lighthouse of Alexandria",
@@ -44,7 +40,3 @@ db.monumentInfo.insertMany([
   }
 
 ]);
-
-};
-
-module.exports = Monuments;

@@ -1373,21 +1373,21 @@ db.questionsAndAnswers.insertMany([
 		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "",
+			question: "How High was the statue of Zeus?",
 			answer1: {
-				content: "",
-				status: false
+				content: "13m",
+				status: true
 			},
 			answer2: {
-				content: "",
+				content: "28m",
 				status: false
 			},
 			answer3: {
-				content: "",
+				content: "67m",
 				status: false
 			},
 			answer4: {
-				content: "",
+				content: "54m",
 				status: false
 			},
 
@@ -1399,19 +1399,19 @@ db.questionsAndAnswers.insertMany([
 		qAndA: {
 			question: "",
 			answer1: {
-				content: "",
-				status: false
+				content: "Phidias",
+				status: true
 			},
 			answer2: {
-				content: "",
+				content: "Aristotle",
 				status: false
 			},
 			answer3: {
-				content: "",
+				content: "Herodotus",
 				status: false
 			},
 			answer4: {
-				content: "",
+				content: "Xenophon",
 				status: false
 			},
 
@@ -1421,21 +1421,44 @@ db.questionsAndAnswers.insertMany([
 		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "",
+			question: "When was the Statue of Zeus created?",
 			answer1: {
-				content: "",
-				status: false
+				content: "435 BC",
+				status: true
 			},
 			answer2: {
-				content: "",
+				content: "112 BC",
 				status: false
 			},
 			answer3: {
-				content: "",
+				content: "826 BC",
 				status: false
 			},
 			answer4: {
-				content: "",
+				content: "4 AD",
+				status: false
+			},
+		}
+	},
+	{
+		id: "",
+		monument: "The Statue of Zeus",
+		qAndA: {
+			question: "When was the Statue of Zeus destroyed?",
+			answer1: {
+				content: "930 AD",
+				status: false
+			},
+			answer2: {
+				content: "123 AD",
+				status: false
+			},
+			answer3: {
+				content: "435 AD",
+				status: true
+			},
+			answer4: {
+				content: "212 BC",
 				status: false
 			},
 
@@ -1445,21 +1468,45 @@ db.questionsAndAnswers.insertMany([
 		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "",
+			question: "Who commissioned the statue of Zeus?",
 			answer1: {
-				content: "",
+				content: "The Athenians",
 				status: false
 			},
 			answer2: {
-				content: "",
+				content: "The Romans",
 				status: false
 			},
 			answer3: {
-				content: "",
+				content: "The Iranians",
 				status: false
 			},
 			answer4: {
-				content: "",
+				content: "The Eleans",
+				status: true
+			},
+
+		}
+	},
+	{
+		id: "",
+		monument: "The Statue of Zeus",
+		qAndA: {
+			question: "What material was used to make the statue of Zeus?",
+			answer1: {
+				content: "Iron",
+				status: false
+			},
+			answer2: {
+				content: "Copper",
+				status: false
+			},
+			answer3: {
+				content: "gold, ivory and wood",
+				status: true
+			},
+			answer4: {
+				content: "Stones",
 				status: false
 			},
 
@@ -1469,21 +1516,21 @@ db.questionsAndAnswers.insertMany([
 		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "",
+			question: "In which city the statue of Zeus was located?",
 			answer1: {
-				content: "",
-				status: false
+				content: "Olympia",
+				status: true
 			},
 			answer2: {
-				content: "",
+				content: "Athens",
 				status: false
 			},
 			answer3: {
-				content: "",
+				content: "Sparta",
 				status: false
 			},
 			answer4: {
-				content: "",
+				content: "Delphi",
 				status: false
 			},
 
@@ -1493,21 +1540,21 @@ db.questionsAndAnswers.insertMany([
 		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "",
+			question: "In which region Olympia is located?",
 			answer1: {
-				content: "",
+				content: "Crete",
 				status: false
 			},
 			answer2: {
-				content: "",
-				status: false
+				content: "Elis",
+				status: true
 			},
 			answer3: {
-				content: "",
+				content: "Attica",
 				status: false
 			},
 			answer4: {
-				content: "",
+				content: "Macedonia",
 				status: false
 			},
 
@@ -1517,21 +1564,21 @@ db.questionsAndAnswers.insertMany([
 		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "",
+			question: "Where the statue of Zeus is located?",
 			answer1: {
-				content: "",
+				content: "On the top of a hill",
 				status: false
 			},
 			answer2: {
-				content: "",
-				status: false
+				content: "Within a temple",
+				status: true
 			},
 			answer3: {
-				content: "",
+				content: "In the city center",
 				status: false
 			},
 			answer4: {
-				content: "",
+				content: "At the entrance to the harbour",
 				status: false
 			},
 
@@ -1541,70 +1588,22 @@ db.questionsAndAnswers.insertMany([
 		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "",
+			question: "Where was the sculptor of the Statue of Zeus from?",
 			answer1: {
-				content: "",
+				content: "Persia",
 				status: false
 			},
 			answer2: {
-				content: "",
+				content: "Roman Empire",
 				status: false
 			},
 			answer3: {
-				content: "",
+				content: "China",
 				status: false
 			},
 			answer4: {
-				content: "",
-				status: false
-			},
-
-		}
-	},
-	{
-		id: "",
-		monument: "The Statue of Zeus",
-		qAndA: {
-			question: "",
-			answer1: {
-				content: "",
-				status: false
-			},
-			answer2: {
-				content: "",
-				status: false
-			},
-			answer3: {
-				content: "",
-				status: false
-			},
-			answer4: {
-				content: "",
-				status: false
-			},
-
-		}
-	},
-	{
-		id: "",
-		monument: "The Statue of Zeus",
-		qAndA: {
-			question: "",
-			answer1: {
-				content: "",
-				status: false
-			},
-			answer2: {
-				content: "",
-				status: false
-			},
-			answer3: {
-				content: "",
-				status: false
-			},
-			answer4: {
-				content: "",
-				status: false
+				content: "Greece",
+				status: true
 			},
 
 		}

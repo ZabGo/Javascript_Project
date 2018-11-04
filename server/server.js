@@ -13,9 +13,15 @@ app.use(parser.json());
 MongoClient.connect('mongodb://localhost:27017')
   .then((client) => {
     const db = client.db('wonders');
+
     const monumentInfoCollection = db.collection('monumentInfo');
     const monumentInfoRouter = createRouter(monumentInfoCollection);
-    app.use('/api/sightings', monumentInfoRouter);
+    app.use('/wonders/info', monumentInfoRouter);
+
+    const monumentInfoCollection = db.collection('monumentInfo');
+    const monumentInfoRouter = createRouter(monumentInfoCollection);
+    app.use('/wonders/game', monumentInfoRouter);
+
   })
   .catch(console.err);
 

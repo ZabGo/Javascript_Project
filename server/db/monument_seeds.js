@@ -31,7 +31,7 @@ db.monumentInfo.insertMany([
   {
     name: "Statue of Zeus at Olympia",
     location: "37.637861, 21.63",
-    details: ""
+    details: "The Statue of Zeus was located at the sanctuary of Olympia, in Greece, and erected in the Temple of Zeus there.  It was made by the Greek sculptor Phidias around 435 BC. It was a giant seated figure, about 13 m high. It represented the god Zeus sitting on an elaborate cedar wood throne ornamented with ebony, ivory, gold and precious stones. It was covered of ivory plates and gold panels over a wooden framework. It was lost and destroyed during the 5th century AD with no copy ever being found, and details of its form are known only from ancient Greek descriptions and representations on coins. The statue of Zeus was commissioned by the Eleans, for their recently constructed Temple of Zeus"
   },
   {
     name: "Temple of Artemis at Ephesus",

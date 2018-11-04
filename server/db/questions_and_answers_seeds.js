@@ -1,4 +1,4 @@
-use questions;
+use wonders;
 db.dropDatabase();
 
 db.questionsAndAnswers.insertMany([

@@ -1234,30 +1234,6 @@ db.questionsAndAnswers.insertMany([
 		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
-			question: "",
-			answer1: {
-				content: "",
-				status: false
-			},
-			answer2: {
-				content: "",
-				status: false
-			},
-			answer3: {
-				content: "",
-				status: false
-			},
-			answer4: {
-				content: "",
-				status: false
-			},
-
-		}
-	},
-	{
-		id: "",
-		monument: "The Colossus of Rhodes",
-		qAndA: {
 			question: "In which country was the Colossus of Rhodes located?",
 			answer1: {
 				content: "Italy",
@@ -1402,7 +1378,7 @@ db.questionsAndAnswers.insertMany([
 		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "",
+			question: "Who commissioned the statue of Zeus?",
 			answer1: {
 				content: "Phidias",
 				status: true

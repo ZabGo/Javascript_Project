@@ -40,7 +40,10 @@ MapInfoView.prototype.plotPoints = function (data) {
     const latitude = wonder.latitude;
     var marker = leaflet.marker([longitude, latitude]).addTo(this.leafletMap);
     marker.on('click', (e) => {
+<<<<<<< HEAD
       console.log(e);
+=======
+>>>>>>> b03130382bfccd716784dd64151d9fa4d702057e
     })
   })
 };

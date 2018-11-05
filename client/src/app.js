@@ -1,6 +1,6 @@
 const MapInfoView = require('./views/map_info_view.js');
 const Info = require('./models/info.js');
-const InfoView = require('./views/info_view.js')
+const InfoView = require('./views/info_view.js');
 
 document.addEventListener('DOMContentLoaded', () => {
   const displayTag = document.querySelector('div#display');

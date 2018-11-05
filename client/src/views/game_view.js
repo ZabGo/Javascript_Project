@@ -54,13 +54,20 @@ GameView.prototype.render = function (questionAndAnswer) {
 
   answerArray = [answer1Container, answer2Container, answer3Container, answer4Container]
 
-  answersContainer.addEventListener('click', (event) => {
-    this.checkIfAnswerCorrect(event.target, answerArray);
+  const self = this;
 
-  })
+  answersContainer.addEventListener('click', function _listen(event) {
+    self.checkIfAnswerCorrect(event.target, answerArray, answersContainer);
+    answersContainer.removeEventListener('click',  _listen);
+  });
+
+  // answersContainer.removeEventListener('click', (event) => {
+  //   console.log("remove");
+  //   this.checkIfAnswerCorrect(event.target, answerArray, answersContainer);
+  // });
 };
 
-GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray) {
+GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, answersContainer) {
   if (selectedAnswer.value == true) {
     selectedAnswer.classList = "green"
     this.resultView.add10Points();
@@ -69,7 +76,9 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray)
     correctAnswer = answerArray.find(answer => answer.value == true)
     correctAnswer.classList = "green"
   }
+
   this.createButtons()
+
 };
 
 GameView.prototype.createButtons = function () {
@@ -99,6 +108,8 @@ GameView.prototype.createButtons = function () {
   buttonEnd.addEventListener('click', (event) => {
     this.container.innerHTML = "";
     this.resultView.render();
+    // answersContainer.removeEventListener('click', this.createButtons, {passive: false});
+
   });
 
 

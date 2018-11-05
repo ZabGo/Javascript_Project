@@ -173,7 +173,7 @@ db.questionsAndAnswers.insertMany([
 			},
 			answer2: {
 				content: "it burned down",
-				status: false
+				status: true
 			},
 			answer3: {
 				content: "an earthquake",
@@ -196,7 +196,7 @@ db.questionsAndAnswers.insertMany([
 			},
 			answer2: {
 				content: "The Hagia Sophia",
-				status: false
+				status: true
 			},
 			answer3: {
 				content: "The Colosseum in Rome",
@@ -238,7 +238,7 @@ db.questionsAndAnswers.insertMany([
 			question: "By which other name was the Lighthouse of Alexandria known?",
 			answer1: {
 				content: "Pharos of Alexandria",
-				status: false
+				status: true
 			},
 			answer2: {
 				content: "Beacon of Alexandria",
@@ -269,7 +269,7 @@ db.questionsAndAnswers.insertMany([
 			},
 			answer3: {
 				content: "the Ptolemaic Kingdom",
-				status: false
+				status: true
 			},
 			answer4: {
 				content: "the Phoenician Kingdom",
@@ -927,7 +927,7 @@ db.questionsAndAnswers.insertMany([
 			question: "How long did the Mausoleum at Halicarnassus survive for?",
 			answer1: {
 				content: "16 centuries",
-				status: false
+				status: true
 			},
 			answer2: {
 				content: "10 centuries",

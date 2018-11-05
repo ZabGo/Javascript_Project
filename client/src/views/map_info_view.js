@@ -39,13 +39,12 @@ MapInfoView.prototype.plotPoints = function (data) {
     const longitude = wonder.longitude;
     const latitude = wonder.latitude;
     var marker = leaflet.marker([longitude, latitude]).addTo(this.leafletMap);
+    marker.on('click', (e) => {
+      console.log(e);
+    })
   })
 };
 
-// marker.addEventListener('click', (e) => {
-//   console.log(e);
-//   PubSub.publish("MonumentInfo:info", e);
-// })
 
 
 module.exports = MapInfoView;

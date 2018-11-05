@@ -623,29 +623,29 @@ db.questionsAndAnswers.insertMany([
 
 		}
 	},
-	{
-		monument: "Great Pyramid of Giza",
-		qAndA: {
-			question: "Which of these is the Great Pyramid of Giza?",
-			answer1: {
-				image: "elimiradorfeat.jpg",
-				status: false
-			},
-			answer2: {
-				image: "mayan_pyramid.jpeg",
-				status: false
-			},
-			answer3: {
-				image: "pyramid_giza.jpeg",
-				status: false
-			},
-			answer4: {
-				image: "Koh-Ker-Pyramid-in-Cambodia.jpg",
-				status: false
-			},
-
-		}
-	},
+	// {
+	// 	monument: "Great Pyramid of Giza",
+	// 	qAndA: {
+	// 		question: "Which of these is the Great Pyramid of Giza?",
+	// 		answer1: {
+	// 			image: "elimiradorfeat.jpg",
+	// 			status: false
+	// 		},
+	// 		answer2: {
+	// 			image: "mayan_pyramid.jpeg",
+	// 			status: false
+	// 		},
+	// 		answer3: {
+	// 			image: "pyramid_giza.jpeg",
+	// 			status: false
+	// 		},
+	// 		answer4: {
+	// 			image: "Koh-Ker-Pyramid-in-Cambodia.jpg",
+	// 			status: false
+	// 		},
+	//
+	// 	}
+	// },
 	{
 		monument: "Great Pyramid of Giza",
 		qAndA: {

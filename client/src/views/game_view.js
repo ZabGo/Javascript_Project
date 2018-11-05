@@ -46,8 +46,21 @@ GameView.prototype.render = function (questionAndAnswer) {
 
   this.container.appendChild(answersContainer)
 
+  answerArray = [answer1Container, answer2Container, answer3Container, answer4Container]
 
+  answersContainer.addEventListener('click', (event) => {
+    this.checkIfAnswerCorrect(event.target, answerArray);
+  })
 };
 
+GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray) {
+  if (selectedAnswer.value == true) {
+    selectedAnswer.classList = "green"
+  } else {
+    selectedAnswer.classList = "red"
+    correctAnswer = answerArray.find(answer => answer.value == true)
+    correctAnswer.classList = "green"
+  }
+};
 
 module.exports = GameView;

@@ -5,10 +5,19 @@ const GameGridView = function (container) {
   this.container = container
 }
 
-GameGridView = function () {
+GameGridView.prototype.bindEvents = function () {
   PubSub.subscribe('Game:question-answer-loaded', (event) => {
+    const arrayOfQuestions = event.detail;
+    individualQuestion = arrayOfQuestions[Math.floor(Math.random()*arrayOfQuestions.length)];
     this.render(event.detail);
-  })
+  });
+};
+
+GameGridView.prototype.render = function (questionAndAnswer) {
+  this.container.innerHTML = "";
+  const gameView = new GameView(this.container);
+  questionAndAnswer.rendre();
 }
+
 
 module.exports = GameGridView;

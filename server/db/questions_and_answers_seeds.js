@@ -1,5 +1,5 @@
 use wonders;
-
+db.collection.drop();
 
 db.questionsAndAnswers.insertMany([
 	{

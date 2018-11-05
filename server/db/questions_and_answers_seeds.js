@@ -1,14 +1,8 @@
-const Questions = function () {
-
-}
-
-const run = function {
 use wonders;
 
 
 db.questionsAndAnswers.insertMany([
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "What was the Temple of Artemis less precisely known as?",
@@ -32,7 +26,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "How many times was the Temple of Artemis completely rebuilt?",
@@ -56,7 +49,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "In which modern day country was the Temple of Artemis?",
@@ -80,7 +72,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "Which year was the final incarnation of the Temple of Artemis destroyed?",
@@ -104,7 +95,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "In which age was the first Temple of Artemis built?",
@@ -128,7 +118,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "Who did Callimachus attribute to building the Temple of Artemis?",
@@ -152,7 +141,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "How was the first Temple of Artemis destroyed?",
@@ -176,7 +164,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "How was the second Temple of Artemis destroyed?",
@@ -200,7 +187,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "Which famous landmark uses columns from the final Temple of Artemis?",
@@ -224,7 +210,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Temple of Artemis",
 		qAndA: {
 			question: "Who funded the final Temple of Artemis?",
@@ -248,7 +233,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "By which other name was the Lighthouse of Alexandria known?",
@@ -272,7 +256,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "Who built the Lighthouse of Alexandria?",
@@ -296,7 +279,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "How tall was the Lighthouse of Alexandria estimated to be?",
@@ -320,7 +302,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "How many earthquakes did the Lighthouse of Alexandria survive?",
@@ -344,7 +325,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "In which modern day country was the Lighthouse of Alexandria located?",
@@ -368,7 +348,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "How long did the Lighthouse of Alexandria take to build? ",
@@ -392,7 +371,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "What was the Lighthouse of Alexandria built from?",
@@ -416,7 +394,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "When was the Lighthouse of Alexandria built?",
@@ -440,7 +417,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "Why was the Lighthouse of Alexandria built?",
@@ -464,7 +440,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Lighthouse of Alexandria",
 		qAndA: {
 			question: "Which famous leader mentioned the Lighthouse of Alexandria in books",
@@ -488,7 +463,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "When did the building of the Great Pyramid of Giza conclude?",
@@ -512,7 +486,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "How tall was the Great Pyramid of Giza when it was built?",
@@ -536,7 +509,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "What type of stone was used as the outer casting stones of the Great Pyramid of Giza to give it a smooth outer surface?",
@@ -560,7 +532,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "How many known chambers are there in the Great Pyramid of Giza?",
@@ -584,7 +555,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "Who do we believe the Great Pyramid of Giza was built for?",
@@ -608,7 +578,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "What stone is the King’s chamber made from in the Great Pyramid of Giza?",
@@ -632,7 +601,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "The Great Pyramid of Giza is located in which country?",
@@ -656,7 +624,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "Which of these is the Great Pyramid of Giza?",
@@ -680,7 +647,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "Which of the 7 ancient wonders remains largely intact?",
@@ -704,7 +670,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Great Pyramid of Giza",
 		qAndA: {
 			question: "The Great Pyramid of Giza was the tallest man-made structure in the world until which structure overtook it?",
@@ -727,7 +692,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Hanging Gardens of Babylon",
 		qAndA: {
 			question: "Where were the Hanging Gardens of Babylon rumoured to be located?",
@@ -751,7 +715,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Hanging Gardens of Babylon",
 		qAndA: {
 			question: "The Hanging Gardens of Babylon have been called by which other name?",
@@ -775,7 +738,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Hanging Gardens of Babylon",
 		qAndA: {
 			question: "Which of the 7 wonder’s locations is not definitively known?",
@@ -799,7 +761,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Hanging Gardens of Babylon",
 		qAndA: {
 			question: "Why were the Hanging Gardens of Babylon described as 'hanging'?",
@@ -823,7 +784,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Hanging Gardens of Babylon",
 		qAndA: {
 			question: "Why do we think the Hanging Gardens of Babylon existed?",
@@ -847,7 +807,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Hanging Gardens of Babylon",
 		qAndA: {
 			question: "When are the Hanging Gardens of Babylon thought to have been built?",
@@ -871,7 +830,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "Hanging Gardens of Babylon",
 		qAndA: {
 			question: "If the Hanging Gardens of Babylon did exist, in which century are they thought to have been destroyed?",
@@ -895,7 +853,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
 			question: "Where was the Mausoleum at Halicarnassus located?",
@@ -919,7 +876,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
 			question: "Where did the word “mausoleum” originate from?",
@@ -943,7 +899,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
 			question: "When was the Mausoleum at Halicarnassus destroyed?",
@@ -967,7 +922,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
 			question: "How long did the Mausoleum at Halicarnassus survive for?",
@@ -991,7 +945,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
 			question: "How tall was the Mausoleum at Halicarnassus?",
@@ -1015,7 +968,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
 			question: "Who identified the Mausoleum at Halicarnassus as one of his Seven Wonders of the Ancient World?",
@@ -1039,7 +991,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
 			question: "What destroyed the Mausoleum at Halicarnassus?",
@@ -1063,7 +1014,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
 			question: "When was the Mausoleum at Halicarnassus build?",
@@ -1087,7 +1037,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
 			question: "Which one of the Ancient Wonders of the World was destroyed last?",
@@ -1111,7 +1060,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
 			question: "When was the Colossus of Rhodes erected?",
@@ -1135,7 +1083,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
 			question: "Who created the Colossus of Rhodes?",
@@ -1159,7 +1106,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
 			question: "When the colossus of Rhodes did collapse?",
@@ -1183,7 +1129,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
 			question: "Why the status did collapse?",
@@ -1207,7 +1152,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
 			question: "Who does the statue represent?",
@@ -1231,9 +1175,34 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
+<<<<<<< HEAD
+=======
+			question: "",
+			answer1: {
+				content: "",
+				status: false
+			},
+			answer2: {
+				content: "",
+				status: false
+			},
+			answer3: {
+				content: "",
+				status: false
+			},
+			answer4: {
+				content: "",
+				status: false
+			},
+
+		}
+	},
+	{
+		monument: "The Colossus of Rhodes",
+		qAndA: {
+>>>>>>> bb06b6b90b86d5e4981b9c4fe9ff66682cb42dd7
 			question: "In which country was the Colossus of Rhodes located?",
 			answer1: {
 				content: "Italy",
@@ -1255,7 +1224,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
 			question: "How high was the Colossus of Rhodes before it was damaged?",
@@ -1279,7 +1247,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
 			question: "Where is the Colossus of Rhodes located within the city?",
@@ -1303,7 +1270,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
 			question: "Why was the colossus of Rhodes created?",
@@ -1327,7 +1293,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Colossus of Rhodes",
 		qAndA: {
 			question: "What was used to make the Colossus of Rhodes?",
@@ -1351,7 +1316,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "How High was the statue of Zeus?",
@@ -1375,7 +1339,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "Who commissioned the statue of Zeus?",
@@ -1399,7 +1362,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "When was the Statue of Zeus created?",
@@ -1422,7 +1384,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "When was the Statue of Zeus destroyed?",
@@ -1446,7 +1407,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "Who commissioned the statue of Zeus?",
@@ -1470,7 +1430,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "What material was used to make the statue of Zeus?",
@@ -1494,7 +1453,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "In which city the statue of Zeus was located?",
@@ -1518,7 +1476,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "In which region Olympia is located?",
@@ -1542,7 +1499,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "Where the statue of Zeus is located?",
@@ -1566,7 +1522,6 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 	{
-		id: "",
 		monument: "The Statue of Zeus",
 		qAndA: {
 			question: "Where was the sculptor of the Statue of Zeus from?",
@@ -1590,7 +1545,3 @@ db.questionsAndAnswers.insertMany([
 		}
 	},
 ]);
-
-};
-
-module.exports = Questions;

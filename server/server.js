@@ -16,12 +16,12 @@ MongoClient.connect('mongodb://localhost:27017')
 
     const monumentInfoCollection = db.collection('monumentInfo');
     const monumentInfoRouter = createRouter(monumentInfoCollection);
+    console.log(monumentInfoCollection);
     app.use('/wonders/info', monumentInfoRouter);
 
-    const monumentInfoCollection = db.collection('monumentInfo');
-    const monumentInfoRouter = createRouter(monumentInfoCollection);
-    app.use('/wonders/game', monumentInfoRouter);
-
+    const questionCollection = db.collection('questionsAndAnswers');
+    const questionRouter = createRouter(questionCollection);
+    app.use('/wonders/game', questionRouter);
   })
   .catch(console.err);
 

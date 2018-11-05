@@ -1,4 +1,4 @@
-// cost PubSub = require('../helpers/pub_sub.js');
+const PubSub = require('../helpers/pub_sub.js');
 const leaflet = require('leaflet');
 
 const MapInfoView = function (container) {
@@ -6,16 +6,20 @@ const MapInfoView = function (container) {
 }
 
 MapInfoView.prototype.bindEvents = function () {
-  // PubSub.subscribe('Info:mapInfoData', (evt) => {
-
-  // });
-  this.render();
-};
+//   PubSub.subscribe('Info:mapInfoData', (evt) => {
+//
+// });
+this.render();
+}
 
 MapInfoView.prototype.render = function (data) {
   this.container.innerHTML = '';
+  const mapInfoView = new MapInfoView(this.container);
+  // data.forEach((wonder) => mapInfoView.render(wonder.name, wonder.location));
   this.createMap();
 };
+
+
 
 MapInfoView.prototype.createMap = function () {
   const mapContainer = document.createElement('div');

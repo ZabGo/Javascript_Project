@@ -7,4 +7,4 @@ db.dropDatabase();
 
 Monuments.run();
 Questions.run();
-Users.run();
+// Users.run();

@@ -14,7 +14,8 @@ MapInfoView.prototype.bindEvents = function () {
 
 MapInfoView.prototype.render = function (data) {
   this.container.innerHTML = '';
-  this.createMap();
+  const mapContainer = this.createMap();
+  this.plotPoints(data);
 };
 
 MapInfoView.prototype.createMap = function () {
@@ -30,11 +31,20 @@ MapInfoView.prototype.createMap = function () {
     .addLayer(CARTOTileLayer)
     .setView([37.9838, 23.7275], 4);
 
+
 };
 
-// MapInfoView.prototype.createText = function () {
-//
-// };
+MapInfoView.prototype.plotPoints = function (data) {
+  data.forEach((wonder) => {
+    const longitude = wonder.longitude;
+    const latitude = wonder.latitude;
+    var marker = L.marker([longitude, latitude]).addTo(this.leafletMap);
+    marker.bindPopup(wonder.name);
+  })
+
+
+  var marker = L.marker([37.9838, 23.7275]).addTo(this.leafletMap);
+};
 
 
 

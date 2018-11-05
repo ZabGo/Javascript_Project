@@ -9,7 +9,9 @@ const Game = function () {
 Game.prototype.getData = function () {
   this.request.get()
     .then((questionAndAnswer) => {
-      PubSub.publish('Game:question-answer-loaded', questionAndAnswer);
+      // const arrayOfQuestions = event.detail;
+    let individualQuestion = questionAndAnswer[Math.floor(Math.random()*questionAndAnswer.length)];
+      PubSub.publish('Game:question-answer-loaded', individualQuestion);
     })
     .catch(console.error);
 };

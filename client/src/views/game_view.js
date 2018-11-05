@@ -1,5 +1,11 @@
+const GameGridView = require("./game_grid_view.js");
+const PubSub = require("../helpers/pub_sub.js");
+const ResultView = require("./result_view.js");
+
 const GameView = function(container){
   this.container = container;
+  this.resultView = new ResultView(this.container)
+  // this.gridView = new GameGridView(this.container)
 }
 
 
@@ -50,17 +56,52 @@ GameView.prototype.render = function (questionAndAnswer) {
 
   answersContainer.addEventListener('click', (event) => {
     this.checkIfAnswerCorrect(event.target, answerArray);
+
   })
 };
 
 GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray) {
   if (selectedAnswer.value == true) {
     selectedAnswer.classList = "green"
+    this.resultView.add10Points();
   } else {
     selectedAnswer.classList = "red"
     correctAnswer = answerArray.find(answer => answer.value == true)
     correctAnswer.classList = "green"
   }
+  this.createButtons()
+};
+
+GameView.prototype.createButtons = function () {
+  const buttonNext = document.createElement('button');
+  buttonNext.textContent = "Next question";
+
+  this.container.appendChild(buttonNext);
+
+  buttonNext.addEventListener('click', (event) => {
+    // this.gridView.bindEvents()
+    PubSub.publish("GameView:New-question", event.target)
+    // const newquestion = new GameGridView(this.container);
+    // newquestion.data();
+
+    // PubSub.subscribe('Game:question-answer-loaded', (event) => {
+    // this.container.innerHTML = "";
+    // // const gameView = new GameView(this.container);
+    // // console.log(event.detail);
+    // this.render(event.detail);
+    });
+
+  const buttonEnd = document.createElement('button');
+  buttonEnd.textContent = "End game";
+
+  this.container.appendChild(buttonEnd);
+
+  buttonEnd.addEventListener('click', (event) => {
+    this.container.innerHTML = "";
+    this.resultView.render();
+  });
+
+
 };
 
 module.exports = GameView;

@@ -16,7 +16,7 @@ GameGridView.prototype.bindEvents = function () {
 GameGridView.prototype.render = function (questionAndAnswer) {
   this.container.innerHTML = "";
   const gameView = new GameView(this.container);
-  questionAndAnswer.render();
+  gameView.render(questionAndAnswer);
 }
 
 

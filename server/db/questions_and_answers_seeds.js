@@ -1177,32 +1177,6 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Colossus of Rhodes",
 		qAndA: {
-<<<<<<< HEAD
-=======
-			question: "",
-			answer1: {
-				content: "",
-				status: false
-			},
-			answer2: {
-				content: "",
-				status: false
-			},
-			answer3: {
-				content: "",
-				status: false
-			},
-			answer4: {
-				content: "",
-				status: false
-			},
-
-		}
-	},
-	{
-		monument: "The Colossus of Rhodes",
-		qAndA: {
->>>>>>> bb06b6b90b86d5e4981b9c4fe9ff66682cb42dd7
 			question: "In which country was the Colossus of Rhodes located?",
 			answer1: {
 				content: "Italy",

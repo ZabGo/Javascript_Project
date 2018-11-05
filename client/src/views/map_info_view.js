@@ -8,6 +8,7 @@ const MapInfoView = function (container) {
 MapInfoView.prototype.bindEvents = function () {
   PubSub.subscribe('Info:mapInfoData', (evt) => {
     console.log(evt.detail);
+    this.plotPoints(evt.detail);
 });
 this.render();
 }
@@ -15,7 +16,6 @@ this.render();
 MapInfoView.prototype.render = function (data) {
   this.container.innerHTML = '';
   const mapContainer = this.createMap();
-  this.plotPoints(data);
 };
 
 
@@ -32,22 +32,20 @@ MapInfoView.prototype.createMap = function () {
   this.leafletMap = leaflet.map(this.container)
     .addLayer(CARTOTileLayer)
     .setView([37.9838, 23.7275], 4);
-
-
 };
 
 MapInfoView.prototype.plotPoints = function (data) {
   data.forEach((wonder) => {
     const longitude = wonder.longitude;
     const latitude = wonder.latitude;
-    var marker = L.marker([longitude, latitude]).addTo(this.leafletMap);
-    marker.bindPopup(wonder.name);
+    var marker = leaflet.marker([longitude, latitude]).addTo(this.leafletMap);
   })
-
-
-  var marker = L.marker([37.9838, 23.7275]).addTo(this.leafletMap);
 };
 
+// marker.addEventListener('click', (e) => {
+//   console.log(e);
+//   PubSub.publish("MonumentInfo:info", e);
+// })
 
 
 module.exports = MapInfoView;

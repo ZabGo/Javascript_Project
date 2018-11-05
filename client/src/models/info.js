@@ -7,6 +7,13 @@ const Info = function (url) {
 };
 
 Info.prototype.bindEvents = function () {
-  const data = getData();
-  PubSub.publish('Info:mapInfoData', data);
+
+};
+
+Info.prototype.getData = function () {
+  this.request.get()
+    .then((data) => {
+      PubSub.publish('Info:mapInfoData', data);
+    })
+    .catch(console.error);
 };

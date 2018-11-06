@@ -8,13 +8,12 @@ const MapInfoView = function (container) {
 MapInfoView.prototype.bindEvents = function () {
   PubSub.subscribe('Info:mapInfoData', (evt) => {
     this.plotPoints(evt.detail);
-
-
 });
 this.render();
 }
 
 MapInfoView.prototype.render = function (data) {
+
   this.container.innerHTML = '';
   this.createContainer();
   this.createMap();
@@ -31,9 +30,7 @@ MapInfoView.prototype.createMap = function () {
   const CARTOTileLayer = new leaflet.TileLayer(CARTOUrl, {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://carto.com/attributions">CARTO</a>'
   });
-  if (this.leafletMap) {
-    this.leafletMap.remove();
-  }
+
   this.leafletMap = leaflet.map(this.container)
     .addLayer(CARTOTileLayer)
     .setView([37.9838, 23.7275], 4);

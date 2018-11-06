@@ -13,6 +13,7 @@ InfoView.prototype.bindEvents = function () {
 }
 InfoView.prototype.render = function (wonder) {
   this.container.innerHTML = '';
+  this.container.textContent = '';
 
   console.log(wonder.image);
 

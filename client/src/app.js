@@ -14,15 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoTags = document.querySelectorAll('.info')
   console.log(infoTags);
   infoTags.forEach(tag => tag.addEventListener('click', (e) => {
-          // const map = document.querySelector('.map');
-          // const divmap = document.querySelector('#display');
-          // divmap.remove();
-          // const map = document.createElement('div');
-          // map.id = "display"
-
-          // map.src = "https://unpkg.com/leaflet@1.3.4/dist/leaflet.js";
-
-
           const url = 'http://localhost:3000/wonders/info';
           const info = new Info(url);
           info.getData();

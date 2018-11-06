@@ -7,7 +7,7 @@ const MapInfoView = function (container) {
 
 MapInfoView.prototype.bindEvents = function () {
   PubSub.subscribe('Info:mapInfoData', (evt) => {
-    console.log(evt.detail);
+
     this.plotPoints(evt.detail);
 });
 this.render();
@@ -42,7 +42,7 @@ MapInfoView.prototype.plotPoints = function (data) {
     marker.on('click', (e) => {
 
       // console.log(e);
-      PubSub.publish('MapInfoView:monumentSelected', e);
+      PubSub.publish('MapInfoView:monumentSelected', wonder.name);
 
     })
   })

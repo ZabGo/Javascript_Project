@@ -52,12 +52,17 @@ GameView.prototype.render = function (questionAndAnswer) {
 
   this.container.appendChild(answersContainer)
 
+  const numberOfLives = document.createElement('p');
+  numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+
+  this.container.appendChild(numberOfLives);
+
   answerArray = [answer1Container, answer2Container, answer3Container, answer4Container]
 
   const self = this;
 
   answersContainer.addEventListener('click', function _listen(event) {
-    self.checkIfAnswerCorrect(event.target, answerArray, answersContainer);
+    self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives);
     answersContainer.removeEventListener('click',  _listen);
   });
 
@@ -67,38 +72,56 @@ GameView.prototype.render = function (questionAndAnswer) {
   // });
 };
 
-GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, answersContainer) {
+GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives) {
   if (selectedAnswer.value == true) {
-    selectedAnswer.classList = "green"
-    this.resultView.add10Points();
+    selectedAnswer.classList = "green";
+      if (this.resultView.counter === 9){
+        const tenQuestion = document.createElement('p');
+        tenQuestion.textContent = "Well done 10 correct questions in a row. You get 100 points!!!"
+        this.container.appendChild(tenQuestion);
+      }
+    this.resultView.addPoints();
+    // this.resultView.addOneLife();
+    numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
   } else {
     selectedAnswer.classList = "red"
     correctAnswer = answerArray.find(answer => answer.value == true)
     correctAnswer.classList = "green"
+    this.resultView.removeOneLife();
+    numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
   }
-
-  this.createButtons()
-
+    this.createButtons(numberOfLives)
 };
 
-GameView.prototype.createButtons = function () {
+GameView.prototype.createButtons = function (numberOfLives) {
+  // if(this.resultView.lives < 0 ){
+  //   this.resultView.render();
+  // } else {
   const buttonNext = document.createElement('button');
   buttonNext.textContent = "Next question";
 
   this.container.appendChild(buttonNext);
 
+  if (this.resultView.lives === 0 ) {
+    this.container.removeChild(buttonNext);
+    numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+  }
+
   buttonNext.addEventListener('click', (event) => {
     // this.gridView.bindEvents()
+
     PubSub.publish("GameView:New-question", event.target)
     // const newquestion = new GameGridView(this.container);
     // newquestion.data();
 
     // PubSub.subscribe('Game:question-answer-loaded', (event) => {
-    // this.container.innerHTML = "";
-    // // const gameView = new GameView(this.container);
-    // // console.log(event.detail);
-    // this.render(event.detail);
+      // this.container.innerHTML = "";
+      // // const gameView = new GameView(this.container);
+      // // console.log(event.detail);
+      // this.render(event.detail);
     });
+// }
+
 
   const buttonEnd = document.createElement('button');
   buttonEnd.textContent = "End game";
@@ -111,8 +134,6 @@ GameView.prototype.createButtons = function () {
     // answersContainer.removeEventListener('click', this.createButtons, {passive: false});
 
   });
-
-
 };
 
 module.exports = GameView;

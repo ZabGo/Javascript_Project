@@ -10,12 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
   info.getData();
   info.bindEvents();
 
+  const infoView = new InfoView(displayTag);
+  infoView.bindEvents();
   mapInfoView.bindEvents(info);
-  // const infoView = new InfoView(displayTag);
-
-  // infoView.bindEvents();
 
 
-
-  // info.bindEvents;
 })

@@ -9,9 +9,10 @@ const Info = function (url) {
 
 Info.prototype.bindEvents = function () {
   PubSub.subscribe('MapInfoView:monumentSelected', (evt) => {
-    //call new function (evt)
     const data = this.data;
     matchWonder(evt, data);
+    //call new function (evt)
+
   });
 };
 
@@ -23,12 +24,13 @@ Info.prototype.getData = function () {
     })
     .catch(console.error);
 };
+function matchWonder(userInput, data) {
 
-// new function(evt) &&
-//match latitude & lonngitude from event vs evry wonder
-// publish wonder
+  data.forEach((wonder) => {
+    if (wonder.name == userInput.detail) {
+      PubSub.publish('Info:wonderSelected', wonder);
+    }
+  })
+};
 
-
-
-//
 module.exports = Info;

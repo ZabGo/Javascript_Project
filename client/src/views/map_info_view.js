@@ -7,7 +7,6 @@ const MapInfoView = function (container) {
 
 MapInfoView.prototype.bindEvents = function () {
   PubSub.subscribe('Info:mapInfoData', (evt) => {
-    // console.log(evt.detail);
     this.plotPoints(evt.detail);
 });
 this.render();

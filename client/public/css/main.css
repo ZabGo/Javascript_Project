@@ -8,14 +8,10 @@
 
 .red {
   background-color: red;
+}
 
 #imageDiv {
-  /* position: relative;
-    left: 0px;
-    right: 0px;
-    max-height: 50px;
-    width: 100%;
-    height: 20%; */
+
     float: right;
     max-height: 450px;
 }

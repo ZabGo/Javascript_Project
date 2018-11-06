@@ -6,7 +6,6 @@ const InfoView = function (container) {
 
 InfoView.prototype.bindEvents = function () {
   PubSub.subscribe('Info:wonderSelected', (evt) => {
-    console.log(evt.detail);
     this.render(evt.detail);
   })
 
@@ -15,18 +14,26 @@ InfoView.prototype.bindEvents = function () {
 InfoView.prototype.render = function (wonder) {
   this.container.innerHTML = '';
 
-  const overAllDiv = document.createElement('div');
-  const imageElement = document.createElement('IMG')
-  imageElement.src = '';
-  overAllDiv.appendChild(imageElement);
+  console.log(wonder.image);
 
+  const overAllDiv = document.createElement('div');
+
+  const imageDiv = document.createElement('div');
+  imageDiv.id = 'imageDiv';
+  const imageElement = document.createElement('IMG');
+  imageElement.src = `images/${wonder.image}`;
+  overAllDiv.appendChild(imageDiv);
+  imageDiv.appendChild(imageElement);
+
+  const contentDiv = document.createElement('div');
   const nameElement = document.createElement('h1')
   nameElement.innerHTML = wonder.name;
-  overAllDiv.appendChild(nameElement);
+  overAllDiv.appendChild(contentDiv);
+  contentDiv.appendChild(nameElement);
 
   const descriptionElement = document.createElement('p')
   descriptionElement.innerHTML = wonder.details;
-  overAllDiv.appendChild(descriptionElement);
+  contentDiv.appendChild(descriptionElement);
 
   this.container.appendChild(overAllDiv);
 };

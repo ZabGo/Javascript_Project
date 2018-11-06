@@ -1,3 +1,9 @@
 #mapContainer {
   height: 400px;
 }
+
+#imageDiv {
+  max-width: 300px;
+  max-height: 300px;
+  margin-bottom: 20px;
+}

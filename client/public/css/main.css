@@ -2,6 +2,13 @@
   height: 400px;
 }
 
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+
 #imageDiv {
   /* position: relative;
     left: 0px;

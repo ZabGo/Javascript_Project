@@ -16,7 +16,6 @@ MongoClient.connect('mongodb://localhost:27017')
 
     const monumentInfoCollection = db.collection('monumentInfo');
     const monumentInfoRouter = createRouter(monumentInfoCollection);
-    // console.log(monumentInfoCollection);
     app.use('/wonders/info', monumentInfoRouter);
 
     const questionCollection = db.collection('questionsAndAnswers');

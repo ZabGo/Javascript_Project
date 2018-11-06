@@ -1,4 +1,5 @@
 use wonders;
+
 db.questionsAndAnswers.drop();
 
 db.questionsAndAnswers.insertMany([
@@ -173,7 +174,7 @@ db.questionsAndAnswers.insertMany([
 			},
 			answer2: {
 				content: "it burned down",
-				status: false
+				status: true
 			},
 			answer3: {
 				content: "an earthquake",
@@ -196,7 +197,7 @@ db.questionsAndAnswers.insertMany([
 			},
 			answer2: {
 				content: "The Hagia Sophia",
-				status: false
+				status: true
 			},
 			answer3: {
 				content: "The Colosseum in Rome",
@@ -238,7 +239,7 @@ db.questionsAndAnswers.insertMany([
 			question: "By which other name was the Lighthouse of Alexandria known?",
 			answer1: {
 				content: "Pharos of Alexandria",
-				status: false
+				status: true
 			},
 			answer2: {
 				content: "Beacon of Alexandria",
@@ -269,7 +270,7 @@ db.questionsAndAnswers.insertMany([
 			},
 			answer3: {
 				content: "the Ptolemaic Kingdom",
-				status: false
+				status: true
 			},
 			answer4: {
 				content: "the Phoenician Kingdom",
@@ -375,19 +376,19 @@ db.questionsAndAnswers.insertMany([
 		qAndA: {
 			question: "What was the Lighthouse of Alexandria built from?",
 			answer1: {
-				content: "basalt",
+				content: "Basalt",
 				status: false
 			},
 			answer2: {
-				content: "granite",
+				content: "Granite",
 				status: false
 			},
 			answer3: {
-				content: "limestone",
+				content: "Limestone",
 				status: true
 			},
 			answer4: {
-				content: "sandstone",
+				content: "Sandstone",
 				status: false
 			},
 
@@ -623,29 +624,29 @@ db.questionsAndAnswers.insertMany([
 
 		}
 	},
-	{
-		monument: "Great Pyramid of Giza",
-		qAndA: {
-			question: "Which of these is the Great Pyramid of Giza?",
-			answer1: {
-				image: "elimiradorfeat.jpg",
-				status: false
-			},
-			answer2: {
-				image: "mayan_pyramid.jpeg",
-				status: false
-			},
-			answer3: {
-				image: "pyramid_giza.jpeg",
-				status: false
-			},
-			answer4: {
-				image: "Koh-Ker-Pyramid-in-Cambodia.jpg",
-				status: false
-			},
-
-		}
-	},
+	// {
+	// 	monument: "Great Pyramid of Giza",
+	// 	qAndA: {
+	// 		question: "Which of these is the Great Pyramid of Giza?",
+	// 		answer1: {
+	// 			image: "elimiradorfeat.jpg",
+	// 			status: false
+	// 		},
+	// 		answer2: {
+	// 			image: "mayan_pyramid.jpeg",
+	// 			status: false
+	// 		},
+	// 		answer3: {
+	// 			image: "pyramid_giza.jpeg",
+	// 			status: false
+	// 		},
+	// 		answer4: {
+	// 			image: "Koh-Ker-Pyramid-in-Cambodia.jpg",
+	// 			status: false
+	// 		},
+	//
+	// 	}
+	// },
 	{
 		monument: "Great Pyramid of Giza",
 		qAndA: {
@@ -927,7 +928,7 @@ db.questionsAndAnswers.insertMany([
 			question: "How long did the Mausoleum at Halicarnassus survive for?",
 			answer1: {
 				content: "16 centuries",
-				status: false
+				status: true
 			},
 			answer2: {
 				content: "10 centuries",
@@ -1016,7 +1017,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
-			question: "When was the Mausoleum at Halicarnassus build?",
+			question: "When was the Mausoleum at Halicarnassus built?",
 			answer1: {
 				content: "220- 210 BC",
 				status: false

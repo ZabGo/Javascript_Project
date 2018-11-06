@@ -6,7 +6,6 @@ const InfoView = function (container) {
 
 InfoView.prototype.bindEvents = function () {
   PubSub.subscribe('Info:wonderSelected', (evt) => {
-    console.log(evt.detail);
     this.render(evt.detail);
   })
 
@@ -16,8 +15,10 @@ InfoView.prototype.render = function (wonder) {
   this.container.innerHTML = '';
 
   const overAllDiv = document.createElement('div');
+  const imageDiv = documnet.createElement('div');
+
   const imageElement = document.createElement('IMG')
-  imageElement.src = '';
+  imageElement.src = `/images/${wonder.image}`;
   overAllDiv.appendChild(imageElement);
 
   const nameElement = document.createElement('h1')

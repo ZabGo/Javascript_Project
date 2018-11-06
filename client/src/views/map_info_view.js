@@ -7,7 +7,7 @@ const MapInfoView = function (container) {
 
 MapInfoView.prototype.bindEvents = function () {
   PubSub.subscribe('Info:mapInfoData', (evt) => {
-    console.log(evt.detail);
+    // console.log(evt.detail);
     this.plotPoints(evt.detail);
 });
 this.render();
@@ -39,10 +39,9 @@ MapInfoView.prototype.plotPoints = function (data) {
     const longitude = wonder.longitude;
     const latitude = wonder.latitude;
     var marker = leaflet.marker([longitude, latitude]).addTo(this.leafletMap);
+    console.log(marker);
     marker.on('click', (e) => {
-
-      // console.log(e);
-      PubSub.publish('MapInfoView:monumentSelected', e);
+      PubSub.publish('MapInfoView:monumentSelected', wonder.name);
 
     })
   })

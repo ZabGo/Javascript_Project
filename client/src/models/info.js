@@ -10,8 +10,8 @@ const Info = function (url) {
 Info.prototype.bindEvents = function () {
   PubSub.subscribe('MapInfoView:monumentSelected', (evt) => {
     //call new function (evt)
-    console.log(evt);
-    console.log(this.data);
+    const data = this.data;
+    matchWonder(evt, data);
   });
 };
 
@@ -24,9 +24,9 @@ Info.prototype.getData = function () {
     .catch(console.error);
 };
 
-// new function(evt)
+// new function(evt) &&
 //match latitude & lonngitude from event vs evry wonder
-// publish wonder 
+// publish wonder
 
 
 

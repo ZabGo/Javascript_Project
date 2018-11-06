@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   mapInfoView.bindEvents(info);
   // const infoView = new InfoView(displayTag);
 
-  // infoView.bindEvents(info);
+  // infoView.bindEvents();
 
 
 

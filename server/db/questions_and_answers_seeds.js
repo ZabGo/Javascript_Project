@@ -1,5 +1,6 @@
 use wonders;
 
+db.questionsAndAnswers.drop();
 
 db.questionsAndAnswers.insertMany([
 	{
@@ -375,19 +376,19 @@ db.questionsAndAnswers.insertMany([
 		qAndA: {
 			question: "What was the Lighthouse of Alexandria built from?",
 			answer1: {
-				content: "basalt",
+				content: "Basalt",
 				status: false
 			},
 			answer2: {
-				content: "granite",
+				content: "Granite",
 				status: false
 			},
 			answer3: {
-				content: "limestone",
+				content: "Limestone",
 				status: true
 			},
 			answer4: {
-				content: "sandstone",
+				content: "Sandstone",
 				status: false
 			},
 
@@ -1016,7 +1017,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Mausoleum at Halicarnassus",
 		qAndA: {
-			question: "When was the Mausoleum at Halicarnassus build?",
+			question: "When was the Mausoleum at Halicarnassus built?",
 			answer1: {
 				content: "220- 210 BC",
 				status: false

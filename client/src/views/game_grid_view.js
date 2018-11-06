@@ -5,21 +5,33 @@ const Game = require('../models/game.js');
 const GameGridView = function (container) {
   this.container = container;
   this.gameView = new GameView(this.container);
-  this.game = new Game();
+  // this.game = new Game();
+  this.questions = [];
 }
 
 GameGridView.prototype.bindEvents = function () {
   PubSub.subscribe('Game:question-answer-loaded', (event) => {
-  this.container.innerHTML = "";
+    this.questions = event.detail
+    this.container.innerHTML = "";
+    let individualQuestion = this.questions[Math.floor(Math.random()*this.questions.length)];
+    questions = this.questions.filter(question => question !== individualQuestion)
+    this.questions = questions
   // const gameView = new GameView(this.container);
   // console.log(event.detail);
-  this.gameView.render(event.detail);
+    this.gameView.render(individualQuestion);
   });
   PubSub.subscribe("GameView:New-question", (event) => {
-    this.game.getData();
+    this.container.innerHTML = "";
+    let individualQuestion = this.questions[Math.floor(Math.random()*this.questions.length)];
+    questions = this.questions.filter(question => question !== individualQuestion)
+    this.questions = questions
+  // const gameView = new GameView(this.container);
+  // console.log(event.detail);
+    this.gameView.render(individualQuestion);
   });
 
 };
+
 
 
 

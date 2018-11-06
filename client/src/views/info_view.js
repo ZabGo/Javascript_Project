@@ -14,20 +14,27 @@ InfoView.prototype.bindEvents = function () {
 InfoView.prototype.render = function (wonder) {
   this.container.innerHTML = '';
 
+  console.log(wonder.image);
+
   const overAllDiv = document.createElement('div');
-  const imageDiv = documnet.createElement('div');
 
-  const imageElement = document.createElement('IMG')
-  imageElement.src = `/images/${wonder.image}`;
-  overAllDiv.appendChild(imageElement);
+  const imageDiv = document.createElement('div');
+  imageDiv.id = 'imageDiv';
+  const imageElement = document.createElement('IMG');
+  imageElement.src = `images/${wonder.image}`;
+  overAllDiv.appendChild(imageDiv);
+  imageDiv.appendChild(imageElement);
 
-  const nameElement = document.createElement('h1')
+  const contentDiv = document.createElement('div');
+  const nameElement = document.createElement('h1');
+  nameElement.id = 'text';
   nameElement.innerHTML = wonder.name;
-  overAllDiv.appendChild(nameElement);
+  overAllDiv.appendChild(contentDiv);
+  contentDiv.appendChild(nameElement);
 
   const descriptionElement = document.createElement('p')
   descriptionElement.innerHTML = wonder.details;
-  overAllDiv.appendChild(descriptionElement);
+  contentDiv.appendChild(descriptionElement);
 
   this.container.appendChild(overAllDiv);
 };

@@ -1,0 +1,42 @@
+const PubSub = require('../helpers/pub_sub.js');
+
+const InfoView = function (container) {
+  this.container = container;
+};
+
+InfoView.prototype.bindEvents = function () {
+  PubSub.subscribe('Info:wonderSelected', (evt) => {
+    this.render(evt.detail);
+  })
+
+
+}
+InfoView.prototype.render = function (wonder) {
+  this.container.innerHTML = '';
+
+  console.log(wonder.image);
+
+  const overAllDiv = document.createElement('div');
+
+  const imageDiv = document.createElement('div');
+  imageDiv.id = 'imageDiv';
+  const imageElement = document.createElement('IMG');
+  imageElement.src = `images/${wonder.image}`;
+  overAllDiv.appendChild(imageDiv);
+  imageDiv.appendChild(imageElement);
+
+  const contentDiv = document.createElement('div');
+  const nameElement = document.createElement('h1')
+  nameElement.innerHTML = wonder.name;
+  overAllDiv.appendChild(contentDiv);
+  contentDiv.appendChild(nameElement);
+
+  const descriptionElement = document.createElement('p')
+  descriptionElement.innerHTML = wonder.details;
+  contentDiv.appendChild(descriptionElement);
+
+  this.container.appendChild(overAllDiv);
+};
+
+
+module.exports = InfoView;

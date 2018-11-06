@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const displayTag = document.querySelector('div#display');
   const mapInfoView = new MapInfoView(displayTag);
 
-  document.querySelector('#info').addEventListener('click', (e) => {
+  const infoTags = document.querySelectorAll('.info')
+  console.log(infoTags);
+  infoTags.forEach(tag => tag.addEventListener('click', (e) => {
           // const map = document.querySelector('.map');
           // const divmap = document.querySelector('#display');
           // divmap.remove();
@@ -29,13 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
           const infoView = new InfoView(displayTag);
           infoView.bindEvents();
           mapInfoView.bindEvents(info);
-
-  })
-  document.querySelector('#game').addEventListener('click', (event) => {
+        })
+  )
+  const gameTags = document.querySelectorAll('.game')
+  gameTags.forEach(tag => tag.addEventListener('click', (event) => {
     const gameContainer = document.querySelector('div#display');
     const gameGridView = new GameGridView(gameContainer);
     gameGridView.bindEvents();
     const game = new Game();
     game.getData();
-  })
+  }))
 })

@@ -45,6 +45,9 @@ MapInfoView.prototype.plotPoints = function (data) {
     const latitude = wonder.latitude;
     var marker = leaflet.marker([longitude, latitude]).addTo(this.leafletMap);
     marker.on('click', (e) => {
+      if (this.leafletMap) {
+        this.leafletMap.remove();
+      }
       PubSub.publish('MapInfoView:monumentSelected', wonder.name);
     })
   })

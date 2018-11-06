@@ -34,6 +34,7 @@ InfoView.prototype.render = function (wonder) {
   contentDiv.appendChild(nameElement);
 
   const descriptionElement = document.createElement('p')
+  descriptionElement.id = "description";
   descriptionElement.innerHTML = wonder.details;
   contentDiv.appendChild(descriptionElement);
 

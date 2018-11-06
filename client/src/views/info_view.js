@@ -5,9 +5,9 @@ const InfoView = function (container) {
 };
 
 InfoView.prototype.bindEvents = function () {
-  PubSub.subscribe('Info:mapInfoData', (evt) => {
-    console.log(evt.detail[0]);
-    this.render(evt.detail[0]);
+  PubSub.subscribe('Info:wonderSelected', (evt) => {
+    console.log(evt.detail);
+    this.render(evt.detail);
   })
 
 

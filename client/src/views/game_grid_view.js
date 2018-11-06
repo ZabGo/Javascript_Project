@@ -19,8 +19,6 @@ GameGridView.prototype.bindEvents = function () {
     let individualQuestion = this.questions[Math.floor(Math.random()*this.questions.length)];
     questions = this.questions.filter(question => question !== individualQuestion)
     this.questions = questions
-  // const gameView = new GameView(this.container);
-  // console.log(event.detail);
     this.gameView.render(individualQuestion);
   });
   PubSub.subscribe("GameView:New-question", (event) => {
@@ -32,8 +30,6 @@ GameGridView.prototype.bindEvents = function () {
     let individualQuestion = this.questions[Math.floor(Math.random()*this.questions.length)];
     questions = this.questions.filter(question => question !== individualQuestion)
     this.questions = questions
-  // const gameView = new GameView(this.container);
-  // console.log(event.detail);
     this.gameView.render(individualQuestion);
   });
 
@@ -42,33 +38,5 @@ GameGridView.prototype.bindEvents = function () {
   })
 
 };
-
-
-
-
-
-
-
-  // this.data();
-//   PubSub.subscribe('GameView:New-question', (event) => {
-//     this.data();
-//   })
-// }
-//
-// GameGridView.prototype.data = function () {
-//   PubSub.subscribe('Game:question-answer-loaded', (event) => {
-//      const arrayOfQuestions = event.detail;
-//      individualQuestion = arrayOfQuestions[Math.floor(Math.random()*arrayOfQuestions.length)];
-//      this.render(individualQuestion);
-//    });
-// };
-//
-// GameGridView.prototype.render = function (individualQuestion) {
-//
-//   this.container.innerHTML = "";
-//     const gameView = new GameView(this.container);
-//     gameView.render(individualQuestion);
-// }
-
 
 module.exports = GameGridView;

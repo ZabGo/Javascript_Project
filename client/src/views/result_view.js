@@ -7,19 +7,16 @@ const ResultView = function (container) {
   this.counter = 0;
 };
 
-
 ResultView.prototype.render = function () {
   this.container.innerHTML = "";
-  const result = document.createElement('p')
-  result.textContent = `points: ${this.points}`;
 
-  this.container.appendChild(result);
-
+  this.displayPoints();
   this.playAgain();
 };
 
 ResultView.prototype.addPoints = function () {
   this.counter += 1
+
   if(this.counter === 10){
     this.points += 100;
     this.counter = 0;
@@ -36,15 +33,12 @@ ResultView.prototype.removeOneLife = function () {
 
 ResultView.prototype.endOfGame = function () {
   this.container.innerHTML = "";
+
   const end = document.createElement("p");
-  end.textContent = "Congratulations you finished all the questions!"
-  this.container.appendChild(end)
+  end.textContent = "Congratulations you finished all the questions!";
+  this.container.appendChild(end);
 
-  const result = document.createElement('p')
-  result.textContent = `points: ${this.points}`;
-
-  this.container.appendChild(result);
-
+  this.displayPoints();
   this.playAgain();
 };
 
@@ -59,6 +53,12 @@ ResultView.prototype.playAgain = function () {
     this.points = 0;
     PubSub.publish('ResultView:Play-again', event)
   })
+};
+
+ResultView.prototype.displayPoints = function () {
+  const result = document.createElement('p')
+  result.textContent = `points: ${this.points}`;
+  this.container.appendChild(result);
 };
 
 module.exports = ResultView;

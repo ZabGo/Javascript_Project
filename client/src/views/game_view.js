@@ -5,7 +5,6 @@ const ResultView = require("./result_view.js");
 const GameView = function(container){
   this.container = container;
   this.resultView = new ResultView(this.container)
-  // this.gridView = new GameGridView(this.container)
 }
 
 
@@ -21,41 +20,17 @@ GameView.prototype.render = function (questionAndAnswer) {
   const answersContainer = document.createElement("div");
   answersContainer.id = "answers";
 
-
-
-
-  const answer1Container = document.createElement("div");
-  answer1Container.id = "answer1";
-  answer1Container.value = questionAndAnswer.qAndA.answer1.status;
-  answer1Container.textContent = questionAndAnswer.qAndA.answer1.content;
-
-  const answer2Container = document.createElement("div");
-  answer2Container.id = "answer2";
-  answer2Container.value = questionAndAnswer.qAndA.answer2.status;
-  answer2Container.textContent = questionAndAnswer.qAndA.answer2.content;
-
-  const answer3Container = document.createElement("div");
-  answer3Container.id = "answer3";
-  answer3Container.value = questionAndAnswer.qAndA.answer3.status;
-  answer3Container.textContent = questionAndAnswer.qAndA.answer3.content;
-
-  const answer4Container = document.createElement("div");
-  answer4Container.id = "answer4";
-  answer4Container.value = questionAndAnswer.qAndA.answer4.status;
-  answer4Container.textContent = questionAndAnswer.qAndA.answer4.content;
-  console.log(answer4Container);
-
-  answersContainer.appendChild(answer1Container)
-  answersContainer.appendChild(answer2Container)
-  answersContainer.appendChild(answer3Container)
-  answersContainer.appendChild(answer4Container)
-
   this.container.appendChild(answersContainer)
 
   const numberOfLives = document.createElement('p');
   numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
 
   this.container.appendChild(numberOfLives);
+
+  const answer1Container = this.createElementAnswer(answersContainer, questionAndAnswer, "answer1")
+  const answer2Container = this.createElementAnswer(answersContainer, questionAndAnswer, "answer2")
+  const answer3Container = this.createElementAnswer(answersContainer, questionAndAnswer, "answer3")
+  const answer4Container = this.createElementAnswer(answersContainer, questionAndAnswer, "answer4")
 
   answerArray = [answer1Container, answer2Container, answer3Container, answer4Container]
 
@@ -66,10 +41,6 @@ GameView.prototype.render = function (questionAndAnswer) {
     answersContainer.removeEventListener('click',  _listen);
   });
 
-  // answersContainer.removeEventListener('click', (event) => {
-  //   console.log("remove");
-  //   this.checkIfAnswerCorrect(event.target, answerArray, answersContainer);
-  // });
 };
 
 GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives) {
@@ -94,9 +65,6 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
 };
 
 GameView.prototype.createButtons = function (numberOfLives) {
-  // if(this.resultView.lives < 0 ){
-  //   this.resultView.render();
-  // } else {
   const buttonNext = document.createElement('button');
   buttonNext.textContent = "Next question";
 
@@ -108,20 +76,8 @@ GameView.prototype.createButtons = function (numberOfLives) {
   }
 
   buttonNext.addEventListener('click', (event) => {
-    // this.gridView.bindEvents()
-
     PubSub.publish("GameView:New-question", event.target)
-    // const newquestion = new GameGridView(this.container);
-    // newquestion.data();
-
-    // PubSub.subscribe('Game:question-answer-loaded', (event) => {
-      // this.container.innerHTML = "";
-      // // const gameView = new GameView(this.container);
-      // // console.log(event.detail);
-      // this.render(event.detail);
     });
-// }
-
 
   const buttonEnd = document.createElement('button');
   buttonEnd.textContent = "End game";
@@ -131,9 +87,21 @@ GameView.prototype.createButtons = function (numberOfLives) {
   buttonEnd.addEventListener('click', (event) => {
     this.container.innerHTML = "";
     this.resultView.render();
-    // answersContainer.removeEventListener('click', this.createButtons, {passive: false});
 
   });
+};
+
+
+GameView.prototype.createElementAnswer = function (answersContainer, questionAndAnswer, id) {
+  const answerContainer = document.createElement("div");
+  answerContainer.id = `${id}`;
+
+  answerContainer.value = questionAndAnswer.qAndA[id].status;
+  answerContainer.textContent = questionAndAnswer.qAndA[id].content;
+
+  answersContainer.appendChild(answerContainer)
+
+  return answerContainer;
 };
 
 module.exports = GameView;

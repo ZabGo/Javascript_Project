@@ -9,7 +9,6 @@ const Game = function () {
 Game.prototype.getData = function () {
   this.request.get()
     .then((questionAndAnswer) => {
-
       PubSub.publish('Game:question-answer-loaded', questionAndAnswer);
     })
     .catch(console.error);

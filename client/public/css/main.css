@@ -2,23 +2,38 @@
   height: 400px;
 }
 
+button{
+  border: 2px solid #89F9FF;
+  border-radius: 20px;
+  background-color: #effeff;
+  background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%);
+  padding: 0px 10px;
+  margin: 0px 0px 0px 10px;
+}
+
 .green {
   background-color: green;
+  border-radius: 20px;
 }
 
 .red {
   background-color: red;
+  border-radius: 20px;
 }
 
 body {
-  background-color: white;
+  background-color: #f3efff;
+  background: linear-gradient(to bottom,#f3efff 0,#a789ff 100%) 0 0 fixed;
   margin: 0;
   font-size: 20px;
+  height: 100%;
+  padding: auto;
 }
 
 div#display {
   margin: auto;
-  background-color: #ffffff;
+  /* background-color: #f3efff;
+  background-image: linear-gradient(to bottom,#f3efff 0,#a789ff 100%); */
   width: 80%;
   height: 100%;
   margin-bottom: 20px;
@@ -104,24 +119,24 @@ img {
   margin-top: 30px;
 }
 #description {
-  background-color: white;
+  /* background-color: white; */
   padding: 10px;
 }
 
 
 #question{
-  margin: 50px 0px;
+  margin: 60px 0px;
   text-align: center;
 }
 
 #answers{
   display: grid;
   text-align: center;
-  margin: 10% 10%;
+  margin: 5% 25% 15%;
   grid-template-columns: 40% 40%;
   grid-template-rows: 40% 40%;
-  grid-column-gap: 100px;
-  grid-row-gap: 30px;
+  grid-column-gap: 90px;
+  grid-row-gap: 40px;
 }
 
 

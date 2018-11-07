@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const infoTags = document.querySelectorAll('.info')
   console.log(infoTags);
   infoTags.forEach(tag => tag.addEventListener('click', (e) => {
+
+    // if (mapInfoView.leafletMap != null){
+    //   mapInfoView.leafletMap.remove();
+    // }
+
           const url = 'http://localhost:3000/wonders/info';
           const info = new Info(url);
           info.getData();

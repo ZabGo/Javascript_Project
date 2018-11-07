@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: green;
+  background-color: white;
   margin: 0;
   font-size: 20px;
 }
@@ -22,17 +22,18 @@ div#display {
   width: 80%;
   height: 100%;
   margin-bottom: 20px;
-  cursor: default;
+  /* cursor: default; */
 }
 
 div.game, div.info {
-  border: 2px solid black;
+  border: 2px solid #89F9FF;
   border-radius: 20px;
   margin: auto;
   display: inline-block;
   padding: 200px 0px;
   text-align: center;
-  background-color: red;
+  background-color: #effeff;
+  background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%);
   width: 45%;
   height: 80%;
   margin-bottom: 20px;
@@ -72,13 +73,18 @@ ul {
   list-style: none;
 }
 
+/*
+light colour - #effeff
+dark colour - #89F9FF
+*/
 li {
   display: inline-block;
   cursor: pointer;
   padding: 30px 100px;
-  background-color: purple;
+  background-color: #effeff;
+  background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%);
   margin: 0px 10px;
-  border: 1px solid black;
+  border: 1px solid #effeff;
   border-radius: 20px;
 }
 
@@ -100,4 +106,38 @@ img {
 #description {
   background-color: white;
   padding: 10px;
+}
+
+
+#question{
+  margin: 50px 0px;
+  text-align: center;
+}
+
+#answers{
+  display: grid;
+  text-align: center;
+  margin: 10% 10%;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 40% 40%;
+  grid-column-gap: 100px;
+  grid-row-gap: 30px;
+}
+
+
+#answer1{
+  grid-column: 1;
+  grid-row: 1;
+}
+#answer2{
+  grid-column: 1;
+  grid-row: 2;
+}
+#answer3{
+  grid-column: 2;
+  grid-row: 1;
+}
+#answer4{
+  grid-column: 2;
+  grid-row: 2;
 }

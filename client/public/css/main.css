@@ -228,3 +228,13 @@ li#points, li#lives {
   display: inline-block;
   padding: 0px 20px;
 }
+#button-next {
+  display: inline-block;
+  margin-right: 300px;
+  float: right;
+}
+#button-end {
+  float: left ;
+  margin-left: 390px;
+
+}

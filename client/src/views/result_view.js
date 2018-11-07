@@ -1,4 +1,5 @@
-const PubSub = require('../helpers/pub_sub.js')
+const PubSub = require('../helpers/pub_sub.js');
+const Chart = require("./chart.js");
 
 const ResultView = function (container) {
   this.container = container;
@@ -59,6 +60,28 @@ ResultView.prototype.displayPoints = function () {
   const result = document.createElement('p')
   result.textContent = `points: ${this.points}`;
   this.container.appendChild(result);
+  this.createChart(this.points);
 };
+
+ResultView.prototype.createChart = function(points) {
+// get request
+//loop through for highest game
+// post new point with game +1
+// get highest 3
+// populate graph
+
+let myChart = new Chart()
+
+const displayChart = document.createElement('div');
+displayChart.id = "chart";
+this.container.appendChild(displayChart);
+
+myChart.render(points);
+
+};
+
+
+
+
 
 module.exports = ResultView;

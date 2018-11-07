@@ -21,10 +21,22 @@ button{
   border-radius: 20px;
 }
 h1 {
-  color: #4682B4;
+  color: black;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #effeff;
     text-transform: uppercase;
     text-align: center;
+}
+div {
+  background-size:contain;
+  /*
+    CSS transitions cause properties that change to transition to the new value
+    There are numererous ways to configure the transition, but here, we're just
+    saying that any properties that change on the div should take 1 second to transition
+    from the old value to the new value.
+  */
+  transition:1s;
+  height:250px;
+  width:250px;
 }
 
 

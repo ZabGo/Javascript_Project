@@ -8,16 +8,51 @@ const User = function () {
 
 Game.prototype.getData = function () {
   this.request.get()
-    .then((questionAndAnswer) => {
-      PubSub.publish('Game:question-answer-loaded', questionAndAnswer);
+    .then((userDetails) => {
+      this.lastTwoGames(userDetails);
     })
     .catch(console.error);
 };
 
+User.prototype.lastTwoGames = function (userDetails) {
+
+  let count = 0;
+  let lastGame = {};
+  let secondCount = 0;
+  let secondLastGame = {};
+
+  userDetails.forEach((game) => {
+    if(game.game > count){
+      count = game.game;
+    }
+  })
+
+  userDetails.forEach((game) => {
+    if(game.game == count){
+      lastGame = game;
+    }
+  })
+
+  userDetails.forEach((game) => {
+    if(game.game > secondCount && game.game < count){
+      secondCount = game.game;
+    }
+  })
+
+  userDetails.forEach((game) => {
+    if(game.game == secondCount){
+      secondLastGame = game;
+    }
+  })
+
+  return [lastGame, secondLastGame];
+
+}
+
 Game.prototype.postNewGame = function (newUser) {
   this.request.post(newUser)
     .then((game) => {
-      PubSub.publish('Game:question-answer-loaded', questionAndAnswer);
+      PubSub.publish('Game:question-answer-loaded', userDetails);
     })
     .catch(console.error);
 };

@@ -2,8 +2,8 @@ var Highcharts = require('highcharts');
 var ResultView = require('./result_view.js');
 const Chart = function() {};
 
-console.log(ResultView.points);
-Chart.prototype.render = function (points) {
+// console.log(ResultView.points);
+Chart.prototype.render = function (lastGame, PreviousTwo) {
 
 Highcharts.chart('chart', {
     chart: {
@@ -46,18 +46,18 @@ Highcharts.chart('chart', {
             "colorByPoint": true,
             "data": [
                 {
-                    "name": "1",
-                    "y": points,
+                    "name": lastGame.game,
+                    "y": lastGame.points
 
                 },
                 {
-                    "name": "2",
-                    "y": 10,
+                    "name": PreviousTwo[0].game,
+                    "y": PreviousTwo[0].points
 
                 },
                 {
-                    "name": "3",
-                    "y": 30,
+                    "name": PreviousTwo[1].game,
+                    "y": PreviousTwo[1].points
 
                 }
             ]

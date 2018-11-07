@@ -1,5 +1,6 @@
 const PubSub = require('../helpers/pub_sub.js');
 const Chart = require("./chart.js");
+const User = require("../models/user.js");
 
 const ResultView = function (container) {
   this.container = container;
@@ -76,11 +77,31 @@ const displayChart = document.createElement('div');
 displayChart.id = "chart";
 this.container.appendChild(displayChart);
 
-myChart.render(points);
+this.lastTwoGames();
 
 };
 
+ResultView.prototype.lastTwoGames = function() {
 
+    const user = new User();
+    const data = user.getData();
+
+    let game = 0;
+
+    data.forEach((game) => {
+      if(game.game > game){
+        game = game.game;
+      }
+    })
+
+    const mostRecentGame = {
+      game: game + 1,
+      points: this.points
+    };
+
+    myChart.render(mostRecentGame, data);
+
+};
 
 
 

@@ -6,7 +6,16 @@ const InfoView = require('./views/info_view.js');
 const Game = require("./models/game.js");
 const GameGridView = require("./views/game_grid_view.js");
 
+
 document.addEventListener('DOMContentLoaded', () => {
+
+
+  // let myChart = new Chart()
+  // // const graph = new HighCharts();
+  // myChart.render();
+  // // graphContainer.texContent = graph.render();
+  //
+  // // Create the chart
 
   const displayTag = document.querySelector('div#display');
   const mapInfoView = new MapInfoView(displayTag);
@@ -32,4 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const game = new Game();
     game.getData();
   }))
+
+
+
+
+
 })

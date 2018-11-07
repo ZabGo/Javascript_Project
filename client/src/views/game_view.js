@@ -56,7 +56,7 @@ GameView.prototype.render = function (questionAndAnswer) {
 
 GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives, points) {
   if (selectedAnswer.value == true) {
-    selectedAnswer.classList = "green";
+    selectedAnswer.style.backgroundColor = "#64DD17";
       if (this.resultView.counter === 9){
         const tenQuestion = document.createElement('p');
         tenQuestion.textContent = "Well done 10 correct questions in a row. You get 100 points!!!"
@@ -68,9 +68,9 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
     numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
     points.textContent = `Points: ${this.resultView.points}`
   } else {
-    selectedAnswer.classList = "red"
+    selectedAnswer.style.backgroundColor = "#DD2C00"
     correctAnswer = answerArray.find(answer => answer.value == true)
-    correctAnswer.classList = "green"
+    correctAnswer.style.backgroundColor = "#64DD17"
     this.resultView.removeOneLife();
     numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
     points.textContent = `Points: ${this.resultView.points}`

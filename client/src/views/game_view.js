@@ -22,10 +22,21 @@ GameView.prototype.render = function (questionAndAnswer) {
 
   this.container.appendChild(answersContainer)
 
-  const numberOfLives = document.createElement('p');
-  numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+  const pointsAndLives = document.createElement('ul');
+  pointsAndLives.id = "points-and-lives"
 
-  this.container.appendChild(numberOfLives);
+  const numberOfLives = document.createElement('li');
+  numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+  numberOfLives.id = "lives"
+
+  const points = document.createElement('li');
+  points.textContent = `Points: ${this.resultView.points}`
+  numberOfLives.id = "points"
+
+
+  pointsAndLives.appendChild(numberOfLives);
+  pointsAndLives.appendChild(points);
+  this.container.appendChild(pointsAndLives)
 
   const answer1Container = this.createElementAnswer(answersContainer, questionAndAnswer, "answer1")
   const answer2Container = this.createElementAnswer(answersContainer, questionAndAnswer, "answer2")
@@ -37,13 +48,13 @@ GameView.prototype.render = function (questionAndAnswer) {
   const self = this;
 
   answersContainer.addEventListener('click', function _listen(event) {
-    self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives);
+    self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points);
     answersContainer.removeEventListener('click',  _listen);
   });
 
 };
 
-GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives) {
+GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives, points) {
   if (selectedAnswer.value == true) {
     selectedAnswer.classList = "green";
       if (this.resultView.counter === 9){
@@ -54,12 +65,14 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
     this.resultView.addPoints();
     // this.resultView.addOneLife();
     numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+    points.textContent = `Points: ${this.resultView.points}`
   } else {
     selectedAnswer.classList = "red"
     correctAnswer = answerArray.find(answer => answer.value == true)
     correctAnswer.classList = "green"
     this.resultView.removeOneLife();
     numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+    points.textContent = `Points: ${this.resultView.points}`
   }
     this.createButtons(numberOfLives)
 };

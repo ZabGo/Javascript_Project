@@ -3,12 +3,20 @@
 }
 
 button{
-  border: 2px solid #89F9FF;
+  font-size: 20px;
+  font-family: Raleway;
+  border: 1px solid #222930;
   border-radius: 20px;
-  background-color: #effeff;
-  background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%);
-  padding: 0px 10px;
+  /* background-color: #effeff; */
+  /* background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%); */
+  padding: 10px 15px;
   margin: 0px 0px 0px 10px;
+  background-color: #4EB1BA;
+  display: inline-block;
+}
+
+button:focus {
+  outline-style: none;
 }
 
 .green {
@@ -18,7 +26,9 @@ button{
   text-align: center;
   vertical-align: middle;
   padding: 10px 5px;
-  background-image: linear-gradient(to bottom,#CCFF90 0,#64DD17 100%);
+  background-color: #64DD17;
+  /* background-image: linear-gradient(to bottom,#CCFF90 0,#64DD17 100%); */
+  color: black;
 }
 
 .red {
@@ -29,22 +39,28 @@ button{
   text-align: center;
   vertical-align: middle;
   padding: 10px 5px;
-  background-image: linear-gradient(to bottom,#FF9E80 0,#DD2C00 100%);
+  background-color: #DD2C00;
+  /* background-image: linear-gradient(to bottom,#FF9E80 0,#DD2C00 100%); */
+  color: black;
 }
 h1 {
-  color: #6A5ACD;
+  color: #222930;
   font-size: 50px;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #effeff;
+    /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #effeff; */
     text-transform: uppercase;
     text-align: center;
+    clear: both;
 }
 
 
 
 
 body {
-  background-color: #f3efff;
-  background: linear-gradient(to bottom,#f3efff 0,#a789ff 100%) 0 0 fixed;
+  background-color: #d6f5ff;
+  color: #222930;
+  font-family: Raleway;
+
+  /* background: linear-gradient(to bottom,#C7DBE5 0,#222930 100%) 0 0 fixed; */
   margin: 0;
   font-size: 20px;
   height: 100%;
@@ -62,14 +78,14 @@ div#display {
 }
 
 div.game, div.info {
-  border: 2px solid #89F9FF;
+  border: 2px solid #222930;
   border-radius: 20px;
   margin: auto;
   display: inline-block;
   padding: 200px 0px;
   text-align: center;
-  background-color: #effeff;
-  background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%);
+  background-color: #4EB1BA;
+  /* background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%); */
   width: 45%;
   height: 80%;
   margin-bottom: 20px;
@@ -77,7 +93,7 @@ div.game, div.info {
   cursor: pointer;
   font-size: 30px;
   text-transform: uppercase;
-  box-shadow: 10px 10px 5px #6A5ACD;
+  /* box-shadow: 10px 10px 5px #4EB1BA; */
 }
 
 div.game {
@@ -90,12 +106,12 @@ div.info {
 
 a:link {
   text-decoration: none;
-  color: black;
+  color: #222930;
 }
 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: #222930;
 }
 
 nav {
@@ -111,25 +127,25 @@ ul {
 light colour - #effeff
 dark colour - #89F9FF
 */
-li:active, div.game:active, div.info:active {
-  box-shadow: 5px 5px 2px #673AB7;
+li.game:active, li.info:active, li.home:active, div.game:active, div.info:active, button:active {
+  /* box-shadow: 5px 5px 2px #1A237E; */
   transform: translateY(4px);
 }
 
-li:hover, div.game:hover, div.info:hover {
+li.game:hover, li.info:hover, li.home:hover, div.game:hover, div.info:hover, button:hover {
   background-image: linear-gradient(to bottom,#effeff 0,#00f2ff 100%);
 }
 
-li {
+li.game, li.home, li.info {
   display: inline-block;
   cursor: pointer;
   padding: 15px 60px;
-  background-color: #effeff;
-  background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%);
+  background-color: #4EB1BA;
+  /* background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%); */
   margin: 0px 10px;
-  border: 1px solid #effeff;
+  border: 1px solid #222930;
   border-radius: 20px;
-  box-shadow: 10px 10px 5px #6A5ACD;
+  /* box-shadow: 10px 10px 5px #1A237E; */
 }
 
 #imageDiv {
@@ -141,15 +157,17 @@ img {
   max-height: 100%;
   max-width: 100%;
   height: auto;
-  width: 300px;
+  width: 400px;
 }
 #text {
   position: relative;
   margin-top: 30px;
+  /* font-size: 20px; */
 }
 #description {
   /* background-color: white; */
   padding: 10px;
+  font-size: 18px;
 }
 
 
@@ -161,7 +179,7 @@ img {
 div.answers{
   display: grid;
   text-align: center;
-  margin: 5% 25% 15%;
+  margin: 5% 25% 5%;
   grid-template-columns: 40% 40%;
   grid-template-rows: 40% 40%;
   grid-column-gap: 90px;
@@ -169,8 +187,8 @@ div.answers{
 }
 
 .answer1, .answer2, .answer3, .answer4 {
-  background-color: #effeff;
-  background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%);
+  background-color: #4EB1BA;
+  /* background-image: linear-gradient(to bottom,#effeff 0,#89F9FF 100%); */
   border-radius: 20px;
   width: 250px;
   height: 80px;
@@ -195,4 +213,19 @@ div.answers{
 .answer4{
   grid-column: 2;
   grid-row: 2;
+}
+
+#pointsAndLives {
+  display: flex;
+  float: left;
+  background-color: #d6f5ff;
+  border: 0px solid black;
+}
+
+li#points {
+  left: 0px;
+}
+
+li#lives {
+  left: 150px;
 }

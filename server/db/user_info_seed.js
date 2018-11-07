@@ -1,3 +1,6 @@
+use wonders;
+db.monumentInfo.drop();
+
 const Users = function () {
 }
 

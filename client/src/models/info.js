@@ -11,6 +11,8 @@ Info.prototype.bindEvents = function () {
   PubSub.subscribe('MapInfoView:monumentSelected', (evt) => {
     const data = this.data;
     matchWonder(evt, data);
+    //call new function (evt)
+
   });
 };
 
@@ -23,7 +25,6 @@ Info.prototype.getData = function () {
     .catch(console.error);
 };
 function matchWonder(userInput, data) {
-
   data.forEach((wonder) => {
     if (wonder.name == userInput.detail) {
       PubSub.publish('Info:wonderSelected', wonder);

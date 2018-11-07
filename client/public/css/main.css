@@ -20,6 +20,12 @@ button{
   background-color: red;
   border-radius: 20px;
 }
+h1 {
+  color: #4682B4;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #effeff;
+    text-transform: uppercase;
+    text-align: center;
+}
 
 
 
@@ -58,6 +64,7 @@ div.game, div.info {
   cursor: pointer;
   font-size: 30px;
   text-transform: uppercase;
+  box-shadow: 10px 10px 5px #6A5ACD;
 }
 
 div.game {
@@ -66,10 +73,6 @@ div.game {
 
 div.info {
   float: right;
-}
-
-h1 {
-  text-align: center;
 }
 
 a:link {
@@ -104,6 +107,7 @@ li {
   margin: 0px 10px;
   border: 1px solid #effeff;
   border-radius: 20px;
+  box-shadow: 10px 10px 5px #6A5ACD;
 }
 
 #imageDiv {

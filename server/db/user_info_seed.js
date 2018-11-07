@@ -1,17 +1,9 @@
 use wonders;
-db.monumentInfo.drop();
+db.userDetails.drop();
 
-const Users = function () {
-}
-
-const run = function () {
-  use wonders
-
-  db.userDetails.insertMany([
+db.userDetails.insertMany([
   	{
-      name: "Test User One"
-  ]);
-};
-
-
-module.exports = User;
+      name: "",
+      points: ""
+    }
+]);

@@ -19,13 +19,6 @@ InfoView.prototype.render = function (wonder) {
 
   const overAllDiv = document.createElement('div');
 
-  const imageDiv = document.createElement('div');
-  imageDiv.id = 'imageDiv';
-  const imageElement = document.createElement('IMG');
-  imageElement.src = `images/${wonder.image}`;
-  overAllDiv.appendChild(imageDiv);
-  imageDiv.appendChild(imageElement);
-
   const contentDiv = document.createElement('div');
   const nameElement = document.createElement('h1');
   nameElement.id = 'text';
@@ -33,10 +26,17 @@ InfoView.prototype.render = function (wonder) {
   overAllDiv.appendChild(contentDiv);
   contentDiv.appendChild(nameElement);
 
+  const imageDiv = document.createElement('div');
+  imageDiv.id = 'imageDiv';
+  const imageElement = document.createElement('IMG');
+  imageElement.src = `images/${wonder.image}`;
+  overAllDiv.appendChild(imageDiv);
+  imageDiv.appendChild(imageElement);
+
   const descriptionElement = document.createElement('p')
   descriptionElement.id = "description";
   descriptionElement.innerHTML = wonder.details;
-  contentDiv.appendChild(descriptionElement);
+  overAllDiv.appendChild(descriptionElement);
 
   this.container.appendChild(overAllDiv);
 };

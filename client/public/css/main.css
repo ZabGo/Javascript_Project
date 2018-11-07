@@ -32,7 +32,8 @@ button{
   background-image: linear-gradient(to bottom,#FF9E80 0,#DD2C00 100%);
 }
 h1 {
-  color: #4682B4;
+  color: #6A5ACD;
+  font-size: 50px;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #effeff;
     text-transform: uppercase;
     text-align: center;
@@ -72,6 +73,7 @@ div.game, div.info {
   width: 45%;
   height: 80%;
   margin-bottom: 20px;
+  margin-top: 40px;
   cursor: pointer;
   font-size: 30px;
   text-transform: uppercase;
@@ -109,6 +111,15 @@ ul {
 light colour - #effeff
 dark colour - #89F9FF
 */
+li:active, div.game:active, div.info:active {
+  box-shadow: 5px 5px 2px #673AB7;
+  transform: translateY(4px);
+}
+
+li:hover, div.game:hover, div.info:hover {
+  background-image: linear-gradient(to bottom,#effeff 0,#00f2ff 100%);
+}
+
 li {
   display: inline-block;
   cursor: pointer;

@@ -216,16 +216,21 @@ div.answers{
 }
 
 #pointsAndLives {
-  display: flex;
-  float: left;
+  /* display: flex; */
+  width: 100%;
+  /* float: left; */
   background-color: #d6f5ff;
   border: 0px solid black;
+  list-style: none;
 }
 
-li#points {
-  left: 0px;
+li#points, li#lives {
+  display: inline-block;
+  padding: 0px 20px;
 }
 
-li#lives {
-  left: 150px;
+#button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

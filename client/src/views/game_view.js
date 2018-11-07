@@ -31,7 +31,7 @@ GameView.prototype.render = function (questionAndAnswer) {
 
   const points = document.createElement('li');
   points.textContent = `Points: ${this.resultView.points}`
-  numberOfLives.id = "points"
+  points.id = "points"
 
 
   pointsAndLives.appendChild(numberOfLives);
@@ -78,10 +78,13 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
 };
 
 GameView.prototype.createButtons = function (numberOfLives) {
+  const buttonContainer = document.createElement('div');
+  buttonContainer.id = "button-container"
+
   const buttonNext = document.createElement('button');
   buttonNext.textContent = "Next question";
 
-  this.container.appendChild(buttonNext);
+  buttonContainer.appendChild(buttonNext);
 
   if (this.resultView.lives === 0 ) {
     this.container.removeChild(buttonNext);
@@ -95,7 +98,9 @@ GameView.prototype.createButtons = function (numberOfLives) {
   const buttonEnd = document.createElement('button');
   buttonEnd.textContent = "End game";
 
-  this.container.appendChild(buttonEnd);
+  buttonContainer.appendChild(buttonEnd);
+
+  this.container.appendChild(buttonContainer)
 
   buttonEnd.addEventListener('click', (event) => {
     this.container.innerHTML = "";

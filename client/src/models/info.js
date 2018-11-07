@@ -11,8 +11,6 @@ Info.prototype.bindEvents = function () {
   PubSub.subscribe('MapInfoView:monumentSelected', (evt) => {
     const data = this.data;
     matchWonder(evt, data);
-    //call new function (evt)
-
   });
 };
 

@@ -18,14 +18,25 @@ GameView.prototype.render = function (questionAndAnswer) {
 
 
   const answersContainer = document.createElement("div");
-  answersContainer.id = "answers";
+  answersContainer.className = "answers";
 
   this.container.appendChild(answersContainer)
 
-  const numberOfLives = document.createElement('p');
-  numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+  const pointsAndLives = document.createElement('ul');
+  pointsAndLives.id = "points-and-lives"
 
-  this.container.appendChild(numberOfLives);
+  const numberOfLives = document.createElement('li');
+  numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+  numberOfLives.id = "lives"
+
+  const points = document.createElement('li');
+  points.textContent = `Points: ${this.resultView.points}`
+  points.id = "points"
+
+
+  pointsAndLives.appendChild(numberOfLives);
+  pointsAndLives.appendChild(points);
+  this.container.appendChild(pointsAndLives)
 
   const answer1Container = this.createElementAnswer(answersContainer, questionAndAnswer, "answer1")
   const answer2Container = this.createElementAnswer(answersContainer, questionAndAnswer, "answer2")
@@ -37,13 +48,13 @@ GameView.prototype.render = function (questionAndAnswer) {
   const self = this;
 
   answersContainer.addEventListener('click', function _listen(event) {
-    self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives);
+    self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points);
     answersContainer.removeEventListener('click',  _listen);
   });
 
 };
 
-GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives) {
+GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives, points) {
   if (selectedAnswer.value == true) {
     selectedAnswer.classList = "green";
       if (this.resultView.counter === 9){
@@ -54,21 +65,26 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
     this.resultView.addPoints();
     // this.resultView.addOneLife();
     numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+    points.textContent = `Points: ${this.resultView.points}`
   } else {
     selectedAnswer.classList = "red"
     correctAnswer = answerArray.find(answer => answer.value == true)
     correctAnswer.classList = "green"
     this.resultView.removeOneLife();
     numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
+    points.textContent = `Points: ${this.resultView.points}`
   }
     this.createButtons(numberOfLives)
 };
 
 GameView.prototype.createButtons = function (numberOfLives) {
+  const buttonContainer = document.createElement('div');
+  buttonContainer.id = "button-container"
+
   const buttonNext = document.createElement('button');
   buttonNext.textContent = "Next question";
 
-  this.container.appendChild(buttonNext);
+  buttonContainer.appendChild(buttonNext);
 
   if (this.resultView.lives === 0 ) {
     this.container.removeChild(buttonNext);
@@ -82,7 +98,9 @@ GameView.prototype.createButtons = function (numberOfLives) {
   const buttonEnd = document.createElement('button');
   buttonEnd.textContent = "End game";
 
-  this.container.appendChild(buttonEnd);
+  buttonContainer.appendChild(buttonEnd);
+
+  this.container.appendChild(buttonContainer)
 
   buttonEnd.addEventListener('click', (event) => {
     this.container.innerHTML = "";
@@ -94,7 +112,7 @@ GameView.prototype.createButtons = function (numberOfLives) {
 
 GameView.prototype.createElementAnswer = function (answersContainer, questionAndAnswer, id) {
   const answerContainer = document.createElement("div");
-  answerContainer.id = `${id}`;
+  answerContainer.className = `${id}`;
 
   answerContainer.value = questionAndAnswer.qAndA[id].status;
   answerContainer.textContent = questionAndAnswer.qAndA[id].content;

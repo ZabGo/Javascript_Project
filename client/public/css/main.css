@@ -221,9 +221,3 @@ li#points, li#lives {
   display: inline-block;
   padding: 0px 20px;
 }
-
-#button-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}

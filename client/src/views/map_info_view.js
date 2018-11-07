@@ -6,12 +6,10 @@ const MapInfoView = function (container) {
 }
 
 MapInfoView.prototype.bindEvents = function () {
+  this.render();
   PubSub.subscribe('Info:mapInfoData', (evt) => {
     this.plotPoints(evt.detail);
-
-
 });
-this.render();
 }
 
 MapInfoView.prototype.render = function (data) {
@@ -21,9 +19,9 @@ MapInfoView.prototype.render = function (data) {
 };
 
 MapInfoView.prototype.createContainer = function () {
-  const mapContainer = document.createElement('div');
-  mapContainer.id = 'mapContainer';
-  this.container.appendChild(mapContainer);
+  this.mapContainer = document.createElement('div');
+  this.mapContainer.id = 'mapContainer';
+  this.container.appendChild(this.mapContainer);
 };
 
 MapInfoView.prototype.createMap = function () {
@@ -34,7 +32,7 @@ MapInfoView.prototype.createMap = function () {
   if (this.leafletMap) {
     this.leafletMap.remove();
   }
-  this.leafletMap = leaflet.map(this.container)
+  this.leafletMap = leaflet.map(this.mapContainer)
     .addLayer(CARTOTileLayer)
     .setView([37.9838, 23.7275], 4);
 };

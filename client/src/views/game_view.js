@@ -18,7 +18,7 @@ GameView.prototype.render = function (questionAndAnswer) {
 
 
   const answersContainer = document.createElement("div");
-  answersContainer.id = "answers";
+  answersContainer.className = "answers";
 
   this.container.appendChild(answersContainer)
 
@@ -94,7 +94,7 @@ GameView.prototype.createButtons = function (numberOfLives) {
 
 GameView.prototype.createElementAnswer = function (answersContainer, questionAndAnswer, id) {
   const answerContainer = document.createElement("div");
-  answerContainer.id = `${id}`;
+  answerContainer.className = `${id}`;
 
   answerContainer.value = questionAndAnswer.qAndA[id].status;
   answerContainer.textContent = questionAndAnswer.qAndA[id].content;

@@ -43,7 +43,14 @@ button:focus {
   /* background-image: linear-gradient(to bottom,#FF9E80 0,#DD2C00 100%); */
   color: black;
 }
-
+h1 {
+  color: #222930;
+  font-size: 50px;
+    /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px #effeff; */
+    text-transform: uppercase;
+    text-align: center;
+    clear: both;
+}
 
 
 

@@ -25,7 +25,6 @@ Info.prototype.getData = function () {
     .catch(console.error);
 };
 function matchWonder(userInput, data) {
-
   data.forEach((wonder) => {
     if (wonder.name == userInput.detail) {
       PubSub.publish('Info:wonderSelected', wonder);

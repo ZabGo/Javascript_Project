@@ -22,6 +22,23 @@ GameView.prototype.render = function (questionAndAnswer) {
 
   this.container.appendChild(answersContainer)
 
+  const numQuestions = document.createElement('div');
+  numQuestions.className = "numQuestions"
+  numQuestions.textContent = `${this.resultView.questionsAnswered}/65 questions answered`
+  this.container.appendChild(numQuestions)
+
+  const progressBarContainer = document.createElement('div');
+  progressBarContainer.className = "progressContainer"
+
+  const progressBar = document.createElement("div");
+  progressBar.className = "progress"
+  progressBar.style.height = "24px"
+  progressBar.style.width = `${this.resultView.questionsAnswered / 65 * 100}` + "%"
+
+  progressBarContainer.appendChild(progressBar);
+  this.container.appendChild(progressBarContainer)
+
+
   const pointsAndLives = document.createElement('ul');
   pointsAndLives.id = "points-and-lives"
 
@@ -48,13 +65,13 @@ GameView.prototype.render = function (questionAndAnswer) {
   const self = this;
 
   answersContainer.addEventListener('click', function _listen(event) {
-    self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points);
+    self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
     answersContainer.removeEventListener('click',  _listen);
   });
 
 };
 
-GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives, points) {
+GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives, points, numQuestions, progressBar) {
   if (selectedAnswer.value == true) {
     selectedAnswer.classList = "green";
       if (this.resultView.counter === 9){
@@ -67,6 +84,8 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
     // this.resultView.addOneLife();
     numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
     points.textContent = `Points: ${this.resultView.points}`
+    numQuestions.textContent = `${this.resultView.questionsAnswered}/65 questions answered`
+    progressBar.style.width = `${this.resultView.questionsAnswered / 65 * 100}` + "%"
   } else {
     selectedAnswer.classList = "red"
     correctAnswer = answerArray.find(answer => answer.value == true)
@@ -74,6 +93,8 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
     this.resultView.removeOneLife();
     numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
     points.textContent = `Points: ${this.resultView.points}`
+    numQuestions.textContent = `${this.resultView.questionsAnswered}/65 questions answered`
+    progressBar.style.width = `${this.resultView.questionsAnswered / 65 * 100}` + "%"
   }
     this.createButtons(numberOfLives)
 };

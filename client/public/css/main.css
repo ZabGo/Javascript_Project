@@ -252,3 +252,18 @@ li#points, li#lives {
 .ten-question {
   text-align: center;
 }
+
+.progress {
+  background-color: #4EB1BA;
+}
+
+.progressContainer {
+  width: 700px;
+  margin-left: 175px; 
+  /* height: 24px; */
+  border: 1px solid black;
+}
+
+.numQuestions {
+  text-align: center;
+}

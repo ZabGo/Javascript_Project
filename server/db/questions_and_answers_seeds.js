@@ -146,19 +146,19 @@ db.questionsAndAnswers.insertMany([
 		qAndA: {
 			question: "How was the first Temple of Artemis destroyed?",
 			answer1: {
-				content: "a flood",
+				content: "A flood",
 				status: true
 			},
 			answer2: {
-				content: "it burned down",
+				content: "It burned down",
 				status: false
 			},
 			answer3: {
-				content: "an earthquake",
+				content: "An earthquake",
 				status: false
 			},
 			answer4: {
-				content: "it was raised during war",
+				content: "It was raised during war",
 				status: false
 			},
 
@@ -169,19 +169,19 @@ db.questionsAndAnswers.insertMany([
 		qAndA: {
 			question: "How was the second Temple of Artemis destroyed?",
 			answer1: {
-				content: "a flood",
+				content: "A flood",
 				status: false
 			},
 			answer2: {
-				content: "it burned down",
+				content: "It burned down",
 				status: true
 			},
 			answer3: {
-				content: "an earthquake",
+				content: "An earthquake",
 				status: false
 			},
 			answer4: {
-				content: "it was raised during war",
+				content: "It was raised during war",
 				status: false
 			},
 
@@ -265,15 +265,15 @@ db.questionsAndAnswers.insertMany([
 				status: false
 			},
 			answer2: {
-				content: "the Ephesian Kingdom",
+				content: "The Ephesian Kingdom",
 				status: false
 			},
 			answer3: {
-				content: "the Ptolemaic Kingdom",
+				content: "The Ptolemaic Kingdom",
 				status: true
 			},
 			answer4: {
-				content: "the Phoenician Kingdom",
+				content: "The Phoenician Kingdom",
 				status: false
 			},
 
@@ -422,11 +422,11 @@ db.questionsAndAnswers.insertMany([
 		qAndA: {
 			question: "Why was the Lighthouse of Alexandria built?",
 			answer1: {
-				content: "the people on Pharos were wreckers",
+				content: "The people on Pharos were wreckers",
 				status: true
 			},
 			answer2: {
-				content: "the harbour was surrounded by rocks",
+				content: "The harbour was surrounded by rocks",
 				status: false
 			},
 			answer3: {
@@ -1132,7 +1132,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Colossus of Rhodes",
 		qAndA: {
-			question: "Why the status did collapse?",
+			question: "Why did The Colossus of Rhodes collapse?",
 			answer1: {
 				content: "It was destroyed during war",
 				status: false
@@ -1155,7 +1155,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Colossus of Rhodes",
 		qAndA: {
-			question: "Who does the statue represent?",
+			question: "Who does The Colossus of Rhodes represent?",
 			answer1: {
 				content: "Helios, the sun-god.",
 				status: true
@@ -1178,7 +1178,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Colossus of Rhodes",
 		qAndA: {
-			question: "In which country was the Colossus of Rhodes located?",
+			question: "In which country was The Colossus of Rhodes located?",
 			answer1: {
 				content: "Italy",
 				status: false
@@ -1201,7 +1201,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Colossus of Rhodes",
 		qAndA: {
-			question: "How high was the Colossus of Rhodes before it was damaged?",
+			question: "How high was The Colossus of Rhodes before it was damaged?",
 			answer1: {
 				content: "55m",
 				status: false
@@ -1247,7 +1247,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Colossus of Rhodes",
 		qAndA: {
-			question: "Why was the colossus of Rhodes created?",
+			question: "Why was The Colossus of Rhodes created?",
 			answer1: {
 				content: "To honour the god Helios",
 				status: false
@@ -1316,7 +1316,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "Who commissioned the statue of Zeus?",
+			question: "Who commissioned The Statue of Zeus?",
 			answer1: {
 				content: "Phidias",
 				status: true
@@ -1361,7 +1361,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "When was the Statue of Zeus destroyed?",
+			question: "When was The Statue of Zeus destroyed?",
 			answer1: {
 				content: "930 AD",
 				status: false
@@ -1384,7 +1384,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "Who commissioned the statue of Zeus?",
+			question: "Who commissioned The Statue of Zeus?",
 			answer1: {
 				content: "The Athenians",
 				status: false
@@ -1407,7 +1407,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "What material was used to make the statue of Zeus?",
+			question: "What material was used to make The Statue of Zeus?",
 			answer1: {
 				content: "Iron",
 				status: false
@@ -1430,7 +1430,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "In which city the statue of Zeus was located?",
+			question: "In which city The Statue of Zeus was located?",
 			answer1: {
 				content: "Olympia",
 				status: true
@@ -1453,7 +1453,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "In which region Olympia is located?",
+			question: "In which region Olympia, where the Satue of Zeus was, was located?",
 			answer1: {
 				content: "Crete",
 				status: false
@@ -1476,7 +1476,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "Where the statue of Zeus is located?",
+			question: "Where The Statue of Zeus was located?",
 			answer1: {
 				content: "On the top of a hill",
 				status: false
@@ -1499,7 +1499,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "Where was the sculptor of the Statue of Zeus from?",
+			question: "Where was the sculptor of The Statue of Zeus from?",
 			answer1: {
 				content: "Persia",
 				status: false

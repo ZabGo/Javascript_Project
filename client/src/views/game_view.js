@@ -60,6 +60,7 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
       if (this.resultView.counter === 9){
         const tenQuestion = document.createElement('p');
         tenQuestion.textContent = "Well done 10 correct questions in a row. You get 100 points!!!"
+        tenQuestion.className = "ten-question"
         this.container.appendChild(tenQuestion);
       }
     this.resultView.addPoints();

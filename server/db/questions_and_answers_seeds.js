@@ -1109,7 +1109,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Colossus of Rhodes",
 		qAndA: {
-			question: "When the colossus of Rhodes did collapse?",
+			question: "When did the colossus of Rhodes collapse?",
 			answer1: {
 				content: "4 AD",
 				status: false
@@ -1384,7 +1384,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "Who commissioned The Statue of Zeus?",
+			question: "Which empire commissioned The Statue of Zeus?",
 			answer1: {
 				content: "The Athenians",
 				status: false
@@ -1417,7 +1417,7 @@ db.questionsAndAnswers.insertMany([
 				status: false
 			},
 			answer3: {
-				content: "gold, ivory and wood",
+				content: "Gold, ivory and wood",
 				status: true
 			},
 			answer4: {
@@ -1430,7 +1430,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "In which city The Statue of Zeus was located?",
+			question: "In which city was The Statue of Zeus located?",
 			answer1: {
 				content: "Olympia",
 				status: true
@@ -1453,7 +1453,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "In which region Olympia, where the Satue of Zeus was, was located?",
+			question: "In which region of Olympia was the Statue of Zeus located?",
 			answer1: {
 				content: "Crete",
 				status: false
@@ -1476,7 +1476,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "Where The Statue of Zeus was located?",
+			question: "Where did The Statue of Zeus stand?",
 			answer1: {
 				content: "On the top of a hill",
 				status: false

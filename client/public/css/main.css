@@ -236,5 +236,19 @@ li#points, li#lives {
 #button-end {
   float: left ;
   margin-left: 390px;
+}
 
+.result-view {
+  margin-top: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+#play-again {
+  margin-top: 80px;
+  margin-left: 450px;
+}
+
+.ten-question {
+  text-align: center;
 }

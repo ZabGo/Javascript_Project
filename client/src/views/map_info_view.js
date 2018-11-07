@@ -31,6 +31,10 @@ MapInfoView.prototype.createMap = function () {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://carto.com/attributions">CARTO</a>'
   });
 
+  if (this.leafletMap) {
+        this.leafletMap.remove();
+      }
+
   this.leafletMap = leaflet.map(this.container)
     .addLayer(CARTOTileLayer)
     .setView([37.9838, 23.7275], 4);

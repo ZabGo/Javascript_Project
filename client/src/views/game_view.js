@@ -9,7 +9,7 @@ const GameView = function(container){
 
 
 GameView.prototype.render = function (questionAndAnswer) {
-  console.log(questionAndAnswer);
+  // console.log(questionAndAnswer);
   const questionContainer = document.createElement('div');
   questionContainer.id = "question";
   questionContainer.textContent = questionAndAnswer.qAndA.question;
@@ -73,7 +73,7 @@ GameView.prototype.render = function (questionAndAnswer) {
 
 GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray, numberOfLives, points, numQuestions, progressBar) {
   if (selectedAnswer.value == true) {
-    selectedAnswer.classList = "green";
+    selectedAnswer.style.backgroundColor = "#64DD17";
       if (this.resultView.counter === 9){
         const tenQuestion = document.createElement('p');
         tenQuestion.textContent = "Well done 10 correct questions in a row. You get 100 points!!!"
@@ -87,9 +87,9 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
     numQuestions.textContent = `${this.resultView.questionsAnswered}/65 questions answered`
     progressBar.style.width = `${this.resultView.questionsAnswered / 65 * 100}` + "%"
   } else {
-    selectedAnswer.classList = "red"
+    selectedAnswer.style.backgroundColor = "#DD2C00"
     correctAnswer = answerArray.find(answer => answer.value == true)
-    correctAnswer.classList = "green"
+    correctAnswer.style.backgroundColor = "#64DD17"
     this.resultView.removeOneLife();
     numberOfLives.textContent = `Lives: ${this.resultView.lives}`;
     points.textContent = `Points: ${this.resultView.points}`

@@ -1,4 +1,6 @@
-const PubSub = require('../helpers/pub_sub.js')
+const PubSub = require('../helpers/pub_sub.js');
+const Chart = require("./chart.js");
+const User = require("../models/user.js");
 
 const ResultView = function (container) {
   this.container = container;
@@ -72,6 +74,54 @@ ResultView.prototype.displayPoints = function () {
 
   this.container.appendChild(endMessage)
   this.container.appendChild(result);
+  this.createChart(this.points);
 };
+
+ResultView.prototype.createChart = function(points) {
+
+const displayChart = document.createElement('div');
+displayChart.id = "chart";
+this.container.appendChild(displayChart);
+
+this.lastTwoGames();
+
+};
+
+ResultView.prototype.lastTwoGames = function() {
+
+    const user = new User();
+    const data = user.getData();
+
+    PubSub.subscribe("User:data-ready", (evt) => {
+      let count = 0;
+
+      console.log(evt);
+
+
+      evt.detail.forEach((game) => {
+        if(game.game > count){
+          count = game.game;
+        }
+      })
+
+      const mostRecentGame = {
+        game: count += 1,
+        points: this.points
+      };
+
+      console.log(count);
+
+      let myChart = new Chart();
+      myChart.render(mostRecentGame, evt.detail);
+
+      //post
+      PubSub.publish("Result:new-game-to-add", mostRecentGame);
+    })
+
+
+
+};
+
+
 
 module.exports = ResultView;

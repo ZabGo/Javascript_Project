@@ -71,28 +71,28 @@ GameView.prototype.render = function (questionAndAnswer) {
   if(clicked === false){
     clicked = true;
     self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
-    answersContainer.removeEventListener('click',  _listen);
+    // answersContainer.removeEventListener('click',  _listen);
     }
   });
   answer2Container.addEventListener('click', function _listen(event) {
     if(clicked === false){
       clicked = true;
       self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
-      answersContainer.removeEventListener('click',  _listen);
+      // answersContainer.removeEventListener('click',  _listen);
       }
   });
   answer3Container.addEventListener('click', function _listen(event) {
     if(clicked === false){
       clicked = true;
       self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
-      answersContainer.removeEventListener('click',  _listen);
+      // answersContainer.removeEventListener('click',  _listen);
       }
   });
   answer4Container.addEventListener('click', function _listen(event) {
     if(clicked === false){
       clicked = true;
       self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
-      answersContainer.removeEventListener('click',  _listen);
+      // answersContainer.removeEventListener('click',  _listen);
       }
   });
 

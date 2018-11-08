@@ -67,34 +67,34 @@ GameView.prototype.render = function (questionAndAnswer) {
 
 
 
-  answer1Container.addEventListener('click', (event) => {
+  answerArray.forEach((answer) => answer.addEventListener('click', (event) => {
   if(clicked === false){
     clicked = true;
     this.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
     // answersContainer.removeEventListener('click',  _listen);
     }
-  });
-  answer2Container.addEventListener('click', (event) => {
-    if(clicked === false){
-      clicked = true;
-      this.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
-      // answersContainer.removeEventListener('click',  _listen);
-      }
-  });
-  answer3Container.addEventListener('click', (event) => {
-    if(clicked === false){
-      clicked = true;
-      this.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
-      // answersContainer.removeEventListener('click',  _listen);
-      }
-  });
-  answer4Container.addEventListener('click', (event) => {
-    if(clicked === false){
-      clicked = true;
-      this.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
-      // answersContainer.removeEventListener('click',  _listen);
-      }
-  });
+  }));
+  // answer2Container.addEventListener('click', (event) => {
+  //   if(clicked === false){
+  //     clicked = true;
+  //     this.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
+  //     // answersContainer.removeEventListener('click',  _listen);
+  //     }
+  // });
+  // answer3Container.addEventListener('click', (event) => {
+  //   if(clicked === false){
+  //     clicked = true;
+  //     this.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
+  //     // answersContainer.removeEventListener('click',  _listen);
+  //     }
+  // });
+  // answer4Container.addEventListener('click', (event) => {
+  //   if(clicked === false){
+  //     clicked = true;
+  //     this.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points, numQuestions, progressBar);
+  //     // answersContainer.removeEventListener('click',  _listen);
+  //     }
+  // });
 
 };
 

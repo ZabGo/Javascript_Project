@@ -6,10 +6,12 @@ const User = function () {
   this.request = new RequestHelper(this.url);
 };
 
-Game.prototype.getData = function () {
+User.prototype.getData = function () {
   this.request.get()
     .then((userDetails) => {
-      this.lastTwoGames(userDetails);
+      // console.log(userDetails);
+      const result = this.lastTwoGames(userDetails);
+      PubSub.publish("User:data-ready", result);
     })
     .catch(console.error);
 };
@@ -42,6 +44,7 @@ User.prototype.lastTwoGames = function (userDetails) {
   userDetails.forEach((game) => {
     if(game.game == secondCount){
       secondLastGame = game;
+      console.log(secondLastGame);
     }
   })
 
@@ -49,7 +52,7 @@ User.prototype.lastTwoGames = function (userDetails) {
 
 }
 
-Game.prototype.postNewGame = function (newUser) {
+User.prototype.postNewGame = function (newUser) {
   this.request.post(newUser)
     .then((game) => {
       PubSub.publish('Game:question-answer-loaded', userDetails);
@@ -57,7 +60,7 @@ Game.prototype.postNewGame = function (newUser) {
     .catch(console.error);
 };
 
-Consumables.prototype.postData = function (formData) {
+User.prototype.postData = function (formData) {
   this.request.post(formData)
     .then((consumables) => {
       PubSub.publish(`Consumables:${this.category}-data-loaded`, consumables);

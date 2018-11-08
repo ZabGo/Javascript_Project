@@ -65,13 +65,6 @@ ResultView.prototype.displayPoints = function () {
 };
 
 ResultView.prototype.createChart = function(points) {
-// get request
-//loop through for highest game
-// post new point with game +1
-// get highest 3
-// populate graph
-
-let myChart = new Chart()
 
 const displayChart = document.createElement('div');
 displayChart.id = "chart";
@@ -86,20 +79,30 @@ ResultView.prototype.lastTwoGames = function() {
     const user = new User();
     const data = user.getData();
 
-    let game = 0;
+    PubSub.subscribe("User:data-ready", (evt) => {
+      let game = 0;
 
-    data.forEach((game) => {
-      if(game.game > game){
-        game = game.game;
-      }
+      console.log(evt);
+
+
+      evt.detail.forEach((game) => {
+        if(game.game > game){
+          game = game.game;
+        }
+      })
+
+      const mostRecentGame = {
+        game: game + 1,
+        points: this.points
+      };
+
+      let myChart = new Chart();
+      myChart.render(mostRecentGame, evt.detail);
+
+      //post 
     })
 
-    const mostRecentGame = {
-      game: game + 1,
-      points: this.points
-    };
 
-    myChart.render(mostRecentGame, data);
 
 };
 

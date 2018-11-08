@@ -9,7 +9,7 @@ const GameView = function(container){
 
 
 GameView.prototype.render = function (questionAndAnswer) {
-  console.log(questionAndAnswer);
+  // console.log(questionAndAnswer);
   const questionContainer = document.createElement('div');
   questionContainer.id = "question";
   questionContainer.textContent = questionAndAnswer.qAndA.question;

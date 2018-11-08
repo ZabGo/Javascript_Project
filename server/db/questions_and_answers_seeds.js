@@ -1316,7 +1316,7 @@ db.questionsAndAnswers.insertMany([
 	{
 		monument: "The Statue of Zeus",
 		qAndA: {
-			question: "Who commissioned The Statue of Zeus?",
+			question: "Who built The Statue of Zeus?",
 			answer1: {
 				content: "Phidias",
 				status: true

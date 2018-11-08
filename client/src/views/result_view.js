@@ -7,6 +7,7 @@ const ResultView = function (container) {
   this.points = 0;
   this.lives = 3;
   this.counter = 0;
+  this.questionsAnswered = 0;
 };
 
 ResultView.prototype.render = function () {
@@ -17,7 +18,8 @@ ResultView.prototype.render = function () {
 };
 
 ResultView.prototype.addPoints = function () {
-  this.counter += 1
+  this.counter += 1;
+  this.questionsAnswered += 1;
 
   if(this.counter === 10){
     this.points += 100;
@@ -31,6 +33,7 @@ ResultView.prototype.addPoints = function () {
 ResultView.prototype.removeOneLife = function () {
   this.lives -= 1;
   this.counter = 0;
+  this.questionsAnswered += 1;
 };
 
 ResultView.prototype.endOfGame = function () {
@@ -55,6 +58,7 @@ ResultView.prototype.playAgain = function () {
     this.counter = 0;
     this.lives = 3;
     this.points = 0;
+    this.questionsAnswered = 0;
     PubSub.publish('ResultView:Play-again', event)
   })
 };

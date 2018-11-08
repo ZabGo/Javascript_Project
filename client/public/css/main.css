@@ -19,30 +19,6 @@ button:focus {
   outline-style: none;
 }
 
-.green {
-  border-radius: 20px;
-  width: 250px;
-  height: 80px;
-  text-align: center;
-  vertical-align: middle;
-  padding: 10px 5px;
-  background-color: #64DD17;
-  /* background-image: linear-gradient(to bottom,#CCFF90 0,#64DD17 100%); */
-  color: black;
-}
-
-.red {
-  background-color: red;
-  border-radius: 20px;
-  width: 250px;
-  height: 80px;
-  text-align: center;
-  vertical-align: middle;
-  padding: 10px 5px;
-  background-color: #DD2C00;
-  /* background-image: linear-gradient(to bottom,#FF9E80 0,#DD2C00 100%); */
-  color: black;
-}
 h1 {
   color: #222930;
   font-size: 50px;
@@ -51,9 +27,6 @@ h1 {
     text-align: center;
     clear: both;
 }
-
-
-
 
 body {
   background-color: #d6f5ff;
@@ -250,5 +223,20 @@ li#points, li#lives {
 }
 
 .ten-question {
+  text-align: center;
+}
+
+.progress {
+  background-color: #4EB1BA;
+}
+
+.progressContainer {
+  width: 700px;
+  margin-left: 175px; 
+  /* height: 24px; */
+  border: 1px solid black;
+}
+
+.numQuestions {
   text-align: center;
 }

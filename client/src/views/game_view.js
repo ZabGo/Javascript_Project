@@ -60,6 +60,7 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
       if (this.resultView.counter === 9){
         const tenQuestion = document.createElement('p');
         tenQuestion.textContent = "Well done 10 correct questions in a row. You get 100 points!!!"
+        tenQuestion.className = "ten-question"
         this.container.appendChild(tenQuestion);
       }
     this.resultView.addPoints();
@@ -78,13 +79,12 @@ GameView.prototype.checkIfAnswerCorrect = function (selectedAnswer, answerArray,
 };
 
 GameView.prototype.createButtons = function (numberOfLives) {
-  const buttonContainer = document.createElement('div');
-  buttonContainer.id = "button-container"
 
   const buttonNext = document.createElement('button');
   buttonNext.textContent = "Next question";
+  buttonNext.id = "button-next"
 
-  buttonContainer.appendChild(buttonNext);
+  this.container.appendChild(buttonNext);
 
   if (this.resultView.lives === 0 ) {
     this.container.removeChild(buttonNext);
@@ -97,10 +97,9 @@ GameView.prototype.createButtons = function (numberOfLives) {
 
   const buttonEnd = document.createElement('button');
   buttonEnd.textContent = "End game";
+  buttonEnd.id = "button-end"
 
-  buttonContainer.appendChild(buttonEnd);
-
-  this.container.appendChild(buttonContainer)
+  this.container.appendChild(buttonEnd)
 
   buttonEnd.addEventListener('click', (event) => {
     this.container.innerHTML = "";

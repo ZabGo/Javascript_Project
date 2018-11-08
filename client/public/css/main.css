@@ -228,9 +228,27 @@ li#points, li#lives {
   display: inline-block;
   padding: 0px 20px;
 }
+#button-next {
+  display: inline-block;
+  margin-right: 300px;
+  float: right;
+}
+#button-end {
+  float: left ;
+  margin-left: 390px;
+}
 
-#button-container {
+.result-view {
+  margin-top: 80px;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+}
+
+#play-again {
+  margin-top: 80px;
+  margin-left: 450px;
+}
+
+.ten-question {
+  text-align: center;
 }

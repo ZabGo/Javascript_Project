@@ -1,14 +1,18 @@
-const Users = function () {
-}
+use wonders;
+db.userDetails.drop();
 
-const run = function () {
-  use wonders
 
   db.userDetails.insertMany([
   	{
-      name: "Test User One"
+      game: 1,
+      points: 30
+    },
+  	{
+      game: 2,
+      points: 40
+    },
+  	{
+      game: 3,
+      points: 20
+    }
   ]);
-};
-
-
-module.exports = User;

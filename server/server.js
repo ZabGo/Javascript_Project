@@ -21,6 +21,10 @@ MongoClient.connect('mongodb://localhost:27017')
     const questionCollection = db.collection('questionsAndAnswers');
     const questionRouter = createRouter(questionCollection);
     app.use('/wonders/game', questionRouter);
+
+    const userCollection = db.collection('userDetails');
+    const userRouter = createRouter(userCollection);
+    app.use('/wonders/user', userRouter);
   })
   .catch(console.err);
 

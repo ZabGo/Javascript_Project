@@ -1,4 +1,4 @@
-
+const User = require('./models/user.js')
 const PubSub = require('./helpers/pub_sub.js')
 const MapInfoView = require('./views/map_info_view.js');
 const Info = require('./models/info.js');
@@ -6,18 +6,22 @@ const InfoView = require('./views/info_view.js');
 const Game = require("./models/game.js");
 const GameGridView = require("./views/game_grid_view.js");
 
+
 document.addEventListener('DOMContentLoaded', () => {
+
+
+  // let myChart = new Chart()
+  // // const graph = new HighCharts();
+  // myChart.render();
+  // // graphContainer.texContent = graph.render();
+  //
+  // // Create the chart
 
   const displayTag = document.querySelector('div#display');
   const mapInfoView = new MapInfoView(displayTag);
 
   const infoTags = document.querySelectorAll('.info')
-  console.log(infoTags);
   infoTags.forEach(tag => tag.addEventListener('click', (e) => {
-
-    // if (mapInfoView.leafletMap != null){
-    //   mapInfoView.leafletMap.remove();
-    // }
 
           const url = 'http://localhost:3000/wonders/info';
           const info = new Info(url);
@@ -36,5 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
     gameGridView.bindEvents();
     const game = new Game();
     game.getData();
+
+    const user = new User();
+    user.addData();
   }))
+
+
+
+
+
 })

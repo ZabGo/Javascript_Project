@@ -47,6 +47,7 @@ div#display {
   width: 80%;
   height: 100%;
   margin-bottom: 20px;
+  text-align: center;
   /* cursor: default; */
 }
 
@@ -152,7 +153,7 @@ img {
 div.answers{
   display: grid;
   text-align: center;
-  margin: 5% 25% 5%;
+  margin: 5% 32% 5%;
   grid-template-columns: 40% 40%;
   grid-template-rows: 40% 40%;
   grid-column-gap: 90px;
@@ -203,12 +204,9 @@ li#points, li#lives {
 }
 #button-next {
   display: inline-block;
-  margin-right: 300px;
-  float: right;
 }
 #button-end {
-  float: left ;
-  margin-left: 390px;
+  display: inline-block;
 }
 
 .result-view {
@@ -219,7 +217,7 @@ li#points, li#lives {
 
 #play-again {
   margin-top: 80px;
-  margin-left: 450px;
+  display: inline-block;
 }
 
 .ten-question {
@@ -231,8 +229,9 @@ li#points, li#lives {
 }
 
 .progressContainer {
-  width: 700px;
-  margin-left: 175px; 
+  width: 60%;
+  display: inline-block;
+  align-self: center;
   /* height: 24px; */
   border: 1px solid black;
 }

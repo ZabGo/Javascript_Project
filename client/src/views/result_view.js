@@ -38,6 +38,7 @@ ResultView.prototype.endOfGame = function () {
 
   const end = document.createElement("p");
   end.textContent = "Congratulations you finished all the questions!";
+  end.className = "result-view"
   this.container.appendChild(end);
 
   this.displayPoints();
@@ -47,6 +48,7 @@ ResultView.prototype.endOfGame = function () {
 ResultView.prototype.playAgain = function () {
   const playAgain = document.createElement('button');
   playAgain.textContent = "Play again";
+  playAgain.id = 'play-again'
   this.container.appendChild(playAgain);
 
   playAgain.addEventListener('click', (event) => {
@@ -58,8 +60,15 @@ ResultView.prototype.playAgain = function () {
 };
 
 ResultView.prototype.displayPoints = function () {
+  const endMessage = document.createElement('p');
+  endMessage.textContent = "Well done! You have scored"
+  endMessage.className = "result-view"
+
   const result = document.createElement('p')
-  result.textContent = `points: ${this.points}`;
+  result.textContent = `${this.points} points!`;
+  result.className = "result-view"
+
+  this.container.appendChild(endMessage)
   this.container.appendChild(result);
   this.createChart(this.points);
 };

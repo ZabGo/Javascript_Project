@@ -16,6 +16,17 @@ User.prototype.getData = function () {
     .catch(console.error);
 };
 
+User.prototype.addData = function () {
+  PubSub.subscribe("Result:new-game-to-add", (evt) => {
+    this.request.post(evt.detail);
+  })
+};
+
+
+
+
+
+
 User.prototype.lastTwoGames = function (userDetails) {
 
   let count = 0;
@@ -44,7 +55,6 @@ User.prototype.lastTwoGames = function (userDetails) {
   userDetails.forEach((game) => {
     if(game.game == secondCount){
       secondLastGame = game;
-      console.log(secondLastGame);
     }
   })
 
@@ -52,19 +62,5 @@ User.prototype.lastTwoGames = function (userDetails) {
 
 }
 
-User.prototype.postNewGame = function (newUser) {
-  this.request.post(newUser)
-    .then((game) => {
-      PubSub.publish('Game:question-answer-loaded', userDetails);
-    })
-    .catch(console.error);
-};
-
-User.prototype.postData = function (formData) {
-  this.request.post(formData)
-    .then((consumables) => {
-      PubSub.publish(`Consumables:${this.category}-data-loaded`, consumables);
-    });
-};
 
 module.exports = User;

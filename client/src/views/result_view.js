@@ -80,26 +80,29 @@ ResultView.prototype.lastTwoGames = function() {
     const data = user.getData();
 
     PubSub.subscribe("User:data-ready", (evt) => {
-      let game = 0;
+      let count = 0;
 
       console.log(evt);
 
 
       evt.detail.forEach((game) => {
-        if(game.game > game){
-          game = game.game;
+        if(game.game > count){
+          count = game.game;
         }
       })
 
       const mostRecentGame = {
-        game: game + 1,
+        game: count += 1,
         points: this.points
       };
+
+      console.log(count);
 
       let myChart = new Chart();
       myChart.render(mostRecentGame, evt.detail);
 
-      //post 
+      //post
+      PubSub.publish("Result:new-game-to-add", mostRecentGame);
     })
 
 

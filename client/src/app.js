@@ -1,4 +1,4 @@
-
+const User = require('./models/user.js')
 const PubSub = require('./helpers/pub_sub.js')
 const MapInfoView = require('./views/map_info_view.js');
 const Info = require('./models/info.js');
@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
     gameGridView.bindEvents();
     const game = new Game();
     game.getData();
+
+    const user = new User();
+    user.addData();
   }))
 
 

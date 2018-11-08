@@ -46,10 +46,37 @@ GameView.prototype.render = function (questionAndAnswer) {
   answerArray = [answer1Container, answer2Container, answer3Container, answer4Container]
 
   const self = this;
+  let clicked = false;
 
-  answersContainer.addEventListener('click', function _listen(event) {
+
+
+  answer1Container.addEventListener('click', function _listen(event) {
+  if(clicked === false){
+    clicked = true;
     self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points);
     answersContainer.removeEventListener('click',  _listen);
+    }
+  });
+  answer2Container.addEventListener('click', function _listen(event) {
+    if(clicked === false){
+      clicked = true;
+      self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points);
+      answersContainer.removeEventListener('click',  _listen);
+      }
+  });
+  answer3Container.addEventListener('click', function _listen(event) {
+    if(clicked === false){
+      clicked = true;
+      self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points);
+      answersContainer.removeEventListener('click',  _listen);
+      }
+  });
+  answer4Container.addEventListener('click', function _listen(event) {
+    if(clicked === false){
+      clicked = true;
+      self.checkIfAnswerCorrect(event.target, answerArray, numberOfLives, points);
+      answersContainer.removeEventListener('click',  _listen);
+      }
   });
 
 };

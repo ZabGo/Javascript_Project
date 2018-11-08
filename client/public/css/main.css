@@ -153,7 +153,7 @@ img {
 div.answers{
   display: grid;
   text-align: center;
-  margin: 5% 32% 5%;
+  margin: 5% 20% 5%;
   grid-template-columns: 40% 40%;
   grid-template-rows: 40% 40%;
   grid-column-gap: 90px;
